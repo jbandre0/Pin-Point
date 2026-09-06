@@ -49,7 +49,24 @@ export default function WorldMap({ countries }: WorldMapProps) {
         projectionConfig={{ scale: 175 }}
         style={{ width: "100%", height: "100%" }}
       >
-        <ZoomableGroup zoom={1} minZoom={1} maxZoom={6} center={[12, 12]}>
+        <ZoomableGroup
+          zoom={1}
+          minZoom={1}
+          maxZoom={6}
+          center={[12, 12]}
+          // macOS-style zoom: a trackpad pinch reaches the browser as a
+          // ctrlKey wheel event — allow only that to zoom (spread fingers =
+          // zoom in, pinch together = zoom out). A plain two-finger scroll
+          // (wheel without ctrlKey) no longer zooms. Non-wheel gestures
+          // (drag to pan, double-click, touch pinch) pass through unless a
+          // non-primary mouse button is held.
+          filterZoomEvent={(raw) => {
+            // @types/react-simple-maps mistypes this as SVGElement; it is
+            // really the source DOM event from d3-zoom.
+            const event = raw as unknown as WheelEvent & MouseEvent;
+            return event.type === "wheel" ? event.ctrlKey : !event.button;
+          }}
+        >
           <Geographies geography={WORLD_TOPOJSON_URL}>
             {({ geographies }) =>
               geographies.map((geo) => {
