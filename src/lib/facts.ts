@@ -7,6 +7,16 @@
 import type { Country, FactCategory } from "./types";
 import { FACT_CATEGORIES } from "./types";
 
+/** Display names for the six quiz-able categories, used everywhere they're shown. */
+export const CATEGORY_LABEL: Record<FactCategory, string> = {
+  language: "Language",
+  road_furniture: "Road furniture",
+  architecture: "Architecture",
+  nature: "Nature",
+  vehicles: "Vehicles",
+  google_coverage: "Google coverage",
+};
+
 export interface Fact {
   id: string; // `${countryId}.${category}.${field}`
   countryId: string;
