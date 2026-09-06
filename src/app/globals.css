@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a111e;
+  --foreground: #e2e8f0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
