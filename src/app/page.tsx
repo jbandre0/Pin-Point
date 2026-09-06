@@ -1,7 +1,7 @@
 import WorldMap from "@/components/WorldMap";
 import StatWidgets from "@/components/StatWidgets";
 import { getAllCountries } from "@/lib/countries";
-import { factIds } from "@/lib/facts";
+import { learnableFactIds } from "@/lib/facts";
 
 export default function HomePage() {
   const countries = getAllCountries();
@@ -16,7 +16,7 @@ export default function HomePage() {
   const perCountry = countries.map((c) => ({
     id: c.id,
     name: c.name,
-    factIds: factIds(c),
+    factIds: learnableFactIds(c),
   }));
 
   return (

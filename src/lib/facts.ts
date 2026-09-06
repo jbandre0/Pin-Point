@@ -60,3 +60,15 @@ export function enumerateFacts(country: Country): Fact[] {
 export function factIds(country: Country): string[] {
   return enumerateFacts(country).map((f) => f.id);
 }
+
+/**
+ * Fact ids for non-blank fields only. A blank field can't meaningfully be
+ * "familiar", so these are what the learn/mastery counts and the simulated
+ * distance are measured against. (The goal is to have as few blank fields as
+ * possible anyway.)
+ */
+export function learnableFactIds(country: Country): string[] {
+  return enumerateFacts(country)
+    .filter((f) => !f.isBlank)
+    .map((f) => f.id);
+}
