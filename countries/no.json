@@ -1,0 +1,85 @@
+{
+  "id": "no",
+  "name": "Norway",
+  "aliases": ["Norge", "Noreg"],
+  "continent": "Europe",
+  "tier": 1,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/countries/norway/",
+    "https://www.plonkit.net/norway",
+    "https://geopinning.space/en/rule/europe/norway/",
+    "https://geodummy.com/norway",
+    "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Norway"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇳🇴",
+    "capital": "Oslo"
+  },
+
+  "language": {
+    "official_languages": ["Norwegian"],
+    "script": "Latin",
+    "sample_text": "KJØR SAKTE — VEGARBEID",
+    "script_notes": "Latin alphabet with æ, ø, å. The ø (shared with Danish, not Swedish) is the quick separator from Swedish ö. Two written standards, Bokmål and Nynorsk. Road-name suffixes -veien / -vegen and -gate. .no domain. Northern Sámi also appears on signs in the far north.",
+    "false_friends": ["Sweden", "Denmark", "Iceland", "Finland"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Black and white when present, but roadside bollards are uncommon in Norway.",
+    "bollard_shape": "Flat-faced post; not a reliable feature because they appear so rarely.",
+    "guardrail_type": "Standard steel W-beam. Frequent road tunnels, avalanche sheds and rock cuttings are a stronger Norway signal than the guardrail itself.",
+    "line_paint": "YELLOW centre line with white edge lines — the single most reliable Norway tell among the Nordics (Sweden uses white). Edge-line dashes are long, the longest in Scandinavia.",
+    "curb_style": "No strongly distinctive curb style noted.",
+    "km_marker_style": "Wooden utility poles. Tall reflector-topped snow poles line many roads, sometimes with an orange band lower down; slim metal pipe/cable markers also occur."
+  },
+
+  "architecture": {
+    "roof_style": "Gabled roofs; traditional turf/sod roofs appear on rural and heritage buildings.",
+    "roof_material": "Clay tile, sheet metal and slate (slate more in the west); occasional grass-covered turf roofs.",
+    "wall_construction": "Painted timber panelling is dominant outside city centres.",
+    "wall_color_palette": "White, Falu red and ochre; brightly painted wooden houses cluster around harbours (e.g. Bergen).",
+    "distinctive_building_types": "Red and white wooden houses; rorbuer (fishermen's cabins, often on stilts over water) in Lofoten; a handful of stave churches; turf-roofed farm buildings."
+  },
+
+  "nature": {
+    "vegetation": "Broadleaf and mixed woodland along the milder south coast; conifer forest inland; sparse birch and bare tundra at altitude and in the far north.",
+    "terrain": "Very mountainous, cut by deep fjords and steep valleys. Dramatic relief, hairpin roads, countless islands and long coastline — terrain alone often separates Norway from flatter Sweden and Finland.",
+    "climate_signature": "Snow and snow poles are common. The west coast is frequently wet and overcast; areas north of the Arctic Circle have very dark winters and midnight sun in summer."
+  },
+
+  "vehicles": {
+    "common_brands": ["Volkswagen", "Toyota", "Tesla"],
+    "plate_color": "White with a blue strip carrying the Norwegian flag and 'N' — blue tag but NO EU stars, since Norway is outside the EU. Green plates mark commercial/goods vehicles.",
+    "plate_format": "Two letters then five digits (e.g. AB 12345).",
+    "distinctive_vehicles": "An unusually high proportion of electric cars (Teslas, e-Golfs and similar) thanks to strong EV incentives — a genuine Norway signal. Green commercial plates on vans."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mix of Gen 2 and Gen 3 (no visible car) and Gen 4 (car visible).",
+    "blur_style": "Standard Google blurring, nothing unusual noted.",
+    "coverage_notes": "White Google car when visible (Gen 4). Coverage includes many tunnels, mountain passes and snowy roads; some remote fjord roads are ferry-linked."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Sweden",
+      "shared_traits": "Falu-red timber houses, Latin script with extra vowels, snowy conifer landscapes, wooden poles, near-identical plates at a glance",
+      "tiebreaker": "Norway has a YELLOW centre line and long edge-line dashes; Sweden's centre line is white. Norway uses ø, Sweden ö. Norway is mountainous with fjords and tunnels; central/southern Sweden is flat."
+    },
+    {
+      "country": "Denmark",
+      "shared_traits": "Scandinavian language, similar signage and plates",
+      "tiebreaker": "Denmark is flat farmland with no mountains, no snow poles and no tunnels, and uses ø like Norway but has a completely different landscape and denser road network."
+    },
+    {
+      "country": "Finland",
+      "shared_traits": "Snow-heavy Nordic coverage, conifer forest, wooden poles",
+      "tiebreaker": "Finnish text is unmistakable and unlike Norwegian. Finland is flat with endless lakes and forest; Norway is steep and fjord-cut. Finnish bollards look cylindrical."
+    }
+  ],
+
+  "regional_variants": []
+}
