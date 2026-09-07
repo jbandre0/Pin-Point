@@ -1,18 +1,23 @@
 import Link from "next/link";
 import WorldMap from "@/components/WorldMap";
 import StatWidgets from "@/components/StatWidgets";
-import { getAllCountries } from "@/lib/countries";
+import { getChildren, getTopLevelCountries } from "@/lib/countries";
 import { learnableFactIds } from "@/lib/facts";
 
 export default function HomePage() {
-  const countries = getAllCountries();
+  const countries = getTopLevelCountries();
 
+  // Each country's map/widget pool aggregates its own facts plus every
+  // region profile beneath it, so shading a country reflects the whole family.
   const countryData = countries.map((c) => ({
     id: c.id,
     name: c.name,
     tier: c.tier,
     status: c.status,
-    factIds: learnableFactIds(c),
+    factIds: [
+      ...learnableFactIds(c),
+      ...getChildren(c.id).flatMap((r) => learnableFactIds(r)),
+    ],
   }));
 
   return (

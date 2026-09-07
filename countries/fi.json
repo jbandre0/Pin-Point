@@ -1,7 +1,9 @@
 {
   "id": "fi",
   "name": "Finland",
-  "aliases": ["Suomi"],
+  "aliases": [
+    "Suomi"
+  ],
   "continent": "Europe",
   "tier": 1,
   "status": "draft",
@@ -13,21 +15,26 @@
     "https://en.wikipedia.org/wiki/Languages_of_Finland",
     "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Finland"
   ],
-
   "quick_id": {
     "driving_side": "right",
     "flag_emoji": "🇫🇮",
     "capital": "Helsinki"
   },
-
   "language": {
-    "official_languages": ["Finnish", "Swedish"],
+    "official_languages": [
+      "Finnish",
+      "Swedish"
+    ],
     "script": "Latin",
     "sample_text": "VAROITUS — TIETYÖ",
     "script_notes": "Finnish is Uralic, not Germanic — long words, doubled vowels and consonants (aa, ää, kk), letters ä and ö but essentially no å in Finnish words. Street suffix -tie, company suffix 'Oy'. Bilingual Finnish/Swedish place-name signs on the south and west coasts; Northern Sámi in Lapland. .fi domain.",
-    "false_friends": ["Sweden", "Estonia", "Norway", "Russia"]
+    "false_friends": [
+      "Sweden",
+      "Estonia",
+      "Norway",
+      "Russia"
+    ]
   },
-
   "road_furniture": {
     "bollard_color": "Black and white, similar palette to Sweden.",
     "bollard_shape": "Reads as cylindrical from the front — rounded rather than flat-faced, which separates it from Sweden's post. (Verify against current photos.)",
@@ -36,7 +43,6 @@
     "curb_style": "No strongly distinctive curb style noted.",
     "km_marker_style": "Wooden utility poles, some concrete. Minor direction signs are white text on blue with a bold filled arrow on the sides; warning signs have a narrow yellow border."
   },
-
   "architecture": {
     "roof_style": "Simple gabled roofs; no iconic national roofline.",
     "roof_material": "Profiled sheet metal and clay tile.",
@@ -44,26 +50,26 @@
     "wall_color_palette": "Falu/Falun red, mustard yellow and grey; generally muted.",
     "distinctive_building_types": "Red wooden farmhouses and barns; small lakeside summer cottages (mökki). Cities carry functionalist and Alvar Aalto–era modernism, but that is not diagnostic."
   },
-
   "nature": {
     "vegetation": "Dense, remarkably uniform boreal forest of pine, spruce and birch covering most of the country.",
     "terrain": "Notably flat — the highest point is only about 1,300 m, in the far north-western arm — and stippled with lakes (on the order of 180,000). Glacial ridges (eskers) and drumlins are the main relief.",
     "climate_signature": "Snow-heavy Street View coverage and low winter sun. Long, straight forest roads, and gravel/dirt roads are more common than in Sweden or Norway — an unmarked Nordic gravel road is a good Finland bet."
   },
-
   "vehicles": {
-    "common_brands": ["Toyota", "Volkswagen", "Škoda"],
+    "common_brands": [
+      "Toyota",
+      "Volkswagen",
+      "Škoda"
+    ],
     "plate_color": "White with the blue EU strip and 'FIN'.",
     "plate_format": "Three letters, a hyphen, three digits (ABC-123).",
     "distinctive_vehicles": "Older cars are common. Reindeer warning signs and free-roaming reindeer appear in Lapland."
   },
-
   "google_coverage": {
     "camera_generation": "Mostly Gen 3 and Gen 4.",
     "blur_style": "Standard Google blurring, nothing unusual noted.",
     "coverage_notes": "White Google car. Heavy winter and snow coverage; large stretches of near-identical forest road with few landmarks."
   },
-
   "confusion_set": [
     {
       "country": "Sweden",
@@ -80,7 +86,5 @@
       "shared_traits": "Snowy Nordic coverage, conifer forest, wooden poles",
       "tiebreaker": "Norway is steep and fjord-cut with a yellow centre line; Finland is flat lake-and-forest. Norwegian text uses ø/æ and looks nothing like Finnish."
     }
-  ],
-
-  "regional_variants": []
+  ]
 }

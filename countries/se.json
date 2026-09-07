@@ -1,7 +1,9 @@
 {
   "id": "se",
   "name": "Sweden",
-  "aliases": ["Sverige"],
+  "aliases": [
+    "Sverige"
+  ],
   "continent": "Europe",
   "tier": 1,
   "status": "draft",
@@ -13,21 +15,25 @@
     "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Sweden",
     "https://en.wikipedia.org/wiki/Road_signs_in_Sweden"
   ],
-
   "quick_id": {
     "driving_side": "right",
     "flag_emoji": "🇸🇪",
     "capital": "Stockholm"
   },
-
   "language": {
-    "official_languages": ["Swedish"],
+    "official_languages": [
+      "Swedish"
+    ],
     "script": "Latin",
     "sample_text": "VARNING — VÄGARBETE",
     "script_notes": "Latin alphabet with å, ä, ö. The ö (not ø) is the quick separator from Norwegian; Danish and Norwegian use ø and æ instead. Street-name suffixes -gatan ('street') and -vägen ('road'); 'Enkelriktat' marks one-way streets. .se domain.",
-    "false_friends": ["Norway", "Finland", "Denmark", "Åland Islands"]
+    "false_friends": [
+      "Norway",
+      "Finland",
+      "Denmark",
+      "Åland Islands"
+    ]
   },
-
   "road_furniture": {
     "bollard_color": "White post with a black band roughly one third from the top; a small white rectangle sits inside the black band. Reflectors can be orange near junctions.",
     "bollard_shape": "Flat-faced post (not cylindrical), in a few variants — wedge, rounded, or thin and slightly curved.",
@@ -36,7 +42,6 @@
     "curb_style": "No strongly distinctive curb style noted.",
     "km_marker_style": "Wooden utility poles are common. Chevron (bend) boards and route-number signs carry the yellow-and-blue national colours; Norway and Finland lean on yellow-on-black instead."
   },
-
   "architecture": {
     "roof_style": "Mostly simple gabled roofs; no single iconic roofline.",
     "roof_material": "Clay tile and profiled sheet metal both common.",
@@ -44,26 +49,25 @@
     "wall_color_palette": "Deep 'Falu red' (Falu rödfärg) is iconic, often with white window trim; also mustard yellow and white.",
     "distinctive_building_types": "Falu-red wooden houses and barns throughout the countryside. Larger towns have plastered 18th–19th-century blocks and mid-century apartment estates."
   },
-
   "nature": {
     "vegetation": "Open farmland across the far south (Skåne); a mixed conifer-and-broadleaf belt through the middle; dense spruce/pine taiga in the north with few broadleaf trees.",
     "terrain": "Mostly flat to gently rolling, dotted with lakes. Real mountains (the Scandes) appear only along the Norwegian border in the north-west.",
     "climate_signature": "Snow is common in winter and lingers far longer in the north. Low sun angle and long shadows for much of the year; a generally cool, muted light."
   },
-
   "vehicles": {
-    "common_brands": ["Volvo", "Volkswagen"],
+    "common_brands": [
+      "Volvo",
+      "Volkswagen"
+    ],
     "plate_color": "White with the blue EU strip and 'S'.",
     "plate_format": "Three letters, a space, then three characters — historically ABC 123, newer issues ABC 12A. Not geographically coded.",
     "distinctive_vehicles": "A high share of Volvos, but not diagnostic on its own. No strong car-based meta."
   },
-
   "google_coverage": {
     "camera_generation": "Mostly Gen 3 and Gen 4.",
     "blur_style": "Standard Google blurring, nothing unusual noted.",
     "coverage_notes": "White Google car. When the car is visible it often shows a long roof antenna, and sometimes a white rear panel with a faint blue stripe. Broad rural coverage including snowy conditions."
   },
-
   "confusion_set": [
     {
       "country": "Norway",
@@ -80,7 +84,5 @@
       "shared_traits": "Scandinavian language feel, EU plates, similar signage",
       "tiebreaker": "Denmark is uniformly flat farmland with almost no forest or snow, uses shorter edge-line dashes, and has a distinct bollard and plate style. No snow poles."
     }
-  ],
-
-  "regional_variants": []
+  ]
 }

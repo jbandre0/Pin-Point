@@ -1,0 +1,83 @@
+{
+  "id": "br-s",
+  "name": "South Brazil (Paraná · Santa Catarina · Rio Grande do Sul)",
+  "aliases": ["Sul", "South Region Brazil"],
+  "continent": "South America",
+  "tier": 1,
+  "status": "draft",
+  "parent": "br",
+  "sources": [
+    "https://geometas.com/metas/countries/brazil/",
+    "https://geopinning.space/en/rule/cs_america/brazil/",
+    "https://en.wikipedia.org/wiki/Araucaria_angustifolia",
+    "https://theworldelsewhere.com/2016/03/15/germans-and-italians-in-the-highlands-of-brazils-far-south/"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇧🇷",
+    "capital": "Porto Alegre"
+  },
+
+  "language": {
+    "official_languages": ["Portuguese"],
+    "script": "Latin",
+    "sample_text": "ATENÇÃO — OBRAS NA PISTA",
+    "script_notes": "Brazilian Portuguese as national. Some German (Hunsrückisch) and Italian (Talian) village and business names survive in the colonial highland towns, alongside standard Portuguese signage.",
+    "false_friends": ["Uruguay", "Argentina", "Southeast Brazil"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "No standard bollard, as elsewhere in Brazil.",
+    "bollard_shape": "Not applicable.",
+    "guardrail_type": "Steel W-beam; concrete barrier on the main highways (BR-101, BR-116, Free Way).",
+    "line_paint": "Yellow centre line, white edge lines; yellow-on-black hazard chevrons — same as national.",
+    "curb_style": "Painted kerbs in towns; tidy, well-kept streetscapes compared with much of Brazil.",
+    "km_marker_style": "The national ladder-and-holes concrete pole. Roads and farms are noticeably more orderly and better-maintained than the national average."
+  },
+
+  "architecture": {
+    "roof_style": "Steeper pitched roofs than the rest of Brazil, reflecting the cooler, wetter climate.",
+    "roof_material": "Terracotta tile and painted sheet metal.",
+    "wall_construction": "Masonry, plus timber and half-timbered (enxaimel / Fachwerk) construction in the German-settled areas.",
+    "wall_color_palette": "White with dark timber framing in the colonial towns; also brick and pastel render.",
+    "distinctive_building_types": "German half-timbered houses and churches (Pomerode, Blumenau, Gramado), Italian stone houses and wineries in the Serra Gaúcha, and orderly European-style farmsteads. No hillside favelas."
+  },
+
+  "nature": {
+    "vegetation": "Araucaria (Paraná pine) — flat-topped, umbrella-shaped conifers — across the highlands is the signature. Atlantic Forest on the coast; open Pampa grassland across most of Rio Grande do Sul.",
+    "terrain": "Rolling highland plateau and the Serra Geral escarpment (deep canyons such as Itaimbezinho), a narrow coastal plain, and flat grassland toward the Uruguayan border.",
+    "climate_signature": "The coolest part of Brazil — four distinct seasons, winter frost on the highlands, and rare light snow at the highest points. Light is often lower and greyer than the tropical north."
+  },
+
+  "vehicles": {
+    "common_brands": ["Volkswagen", "Fiat", "Chevrolet"],
+    "plate_color": "Mercosur white plate with a blue 'BRASIL' strip; older grey plates common; red commercial plates.",
+    "plate_format": "Mercosur ABC1D23; older ABC-1234.",
+    "distinctive_vehicles": "National mix. More agricultural machinery and cattle transport in the Pampa; gaúcho ranching culture."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Good, dense coverage across all three states, mostly white car. Winter scenes can look distinctly un-tropical — bare trees, frost, grey skies."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Uruguay",
+      "shared_traits": "The Pampa grassland in Rio Grande do Sul is nearly identical to Uruguay — flat pasture, cattle, big skies",
+      "tiebreaker": "Language is the tell: Portuguese vs Spanish. Brazil keeps its Mercosur 'BRASIL' plates and ladder-and-holes concrete poles; Uruguay's signage, plates and poles differ."
+    },
+    {
+      "country": "Argentina",
+      "shared_traits": "Pampa landscape, cattle country, right-hand drive",
+      "tiebreaker": "Portuguese vs Spanish signage; Brazilian plates and poles; and the araucaria highlands and German/Italian towns have no Argentine equivalent this far south."
+    },
+    {
+      "country": "Southeast Brazil",
+      "shared_traits": "Same country furniture, language and Atlantic Forest coast",
+      "tiebreaker": "The South is cooler with araucaria pines, half-timbered European architecture, steeper roofs and no favelas; the Southeast is hot, has hillside favelas and much larger cities."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "br-ne",
+  "name": "Northeast Brazil (Bahia · Pernambuco · Ceará)",
+  "aliases": ["Nordeste", "Sertão", "Northeast Region Brazil"],
+  "continent": "South America",
+  "tier": 1,
+  "status": "draft",
+  "parent": "br",
+  "sources": [
+    "https://geometas.com/metas/countries/brazil/",
+    "https://geopinning.space/en/rule/cs_america/brazil/",
+    "https://en.wikipedia.org/wiki/Caatinga",
+    "https://en.wikipedia.org/wiki/Northeast_Region,_Brazil"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇧🇷",
+    "capital": "Salvador"
+  },
+
+  "language": {
+    "official_languages": ["Portuguese"],
+    "script": "Latin",
+    "sample_text": "ATENÇÃO — OBRAS NA PISTA",
+    "script_notes": "Brazilian Portuguese as national — ã, õ, ç, BR-XXX shields, black-backed signs. Higher BR route numbers (200s–400s) run through the region.",
+    "false_friends": ["Southeast Brazil", "North Brazil", "Mexico"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "No standard bollard, as elsewhere in Brazil.",
+    "bollard_shape": "Not applicable.",
+    "guardrail_type": "Steel W-beam where present; many interior roads have none.",
+    "line_paint": "Yellow centre line and white edge lines as national, but interior roads are frequently unmarked or unpaved.",
+    "curb_style": "Painted kerbs in coastal cities; little kerbing inland.",
+    "km_marker_style": "The national ladder-and-holes concrete pole. Infrastructure is visibly poorer than the Southeast — more dirt roads, more motorcycles, simpler buildings."
+  },
+
+  "architecture": {
+    "roof_style": "Low-pitched gables; many flat-roofed rendered houses.",
+    "roof_material": "Terracotta tile and fibre-cement sheeting; a lot of unfinished builds.",
+    "wall_construction": "Rendered or bare masonry; simple single-storey houses inland.",
+    "wall_color_palette": "Whitewash and bright colours on the coast; bare brick and sun-bleached render inland.",
+    "distinctive_building_types": "Colourful Portuguese colonial centres with azulejo tiles on the coast (Salvador's Pelourinho, Olinda, São Luís); plain rendered or brick houses across the sertão."
+  },
+
+  "nature": {
+    "vegetation": "Semi-arid Caatinga in the interior — thorny scrub, columnar cacti, low bushes that drop their leaves in the dry season. A green coastal belt (Zona da Mata) with sugarcane and coconut palms; carnaúba wax palms in Ceará and Piauí, babassu palms toward Maranhão.",
+    "terrain": "Low uplands 200–500 m (the Borborema, Ibiapaba and Araripe plateaus) inland; a coastal plain with extensive white sand dunes near Natal, Fortaleza and in the Lençóis Maranhenses.",
+    "climate_signature": "Hot year-round. The interior is markedly dry with low, seasonal rainfall — sparse brown vegetation and often pale, whitish soil rather than the red soil of central Brazil. Intense sun and hard shadows."
+  },
+
+  "vehicles": {
+    "common_brands": ["Volkswagen", "Fiat", "Chevrolet"],
+    "plate_color": "Mercosur white plate with a blue 'BRASIL' strip; many older grey plates; red commercial plates.",
+    "plate_format": "Mercosur ABC1D23; older ABC-1234.",
+    "distinctive_vehicles": "Motorcycles are extremely common and often the main vehicle; older, more worn cars than in the south."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mix of Gen 2, Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Reasonable along the coast and main highways, thinner across the sertão. Mostly white car; a lot of unpaved-road coverage."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Southeast Brazil",
+      "shared_traits": "Same language, plates, concrete poles and coastal Atlantic Forest",
+      "tiebreaker": "The Northeast interior is dry Caatinga — cacti, leafless scrub, pale soil, poorer unpaved roads; the Southeast is green, hilly, red-soiled and developed."
+    },
+    {
+      "country": "North Brazil",
+      "shared_traits": "Both are hotter, poorer and less-covered than the south; motorcycles everywhere",
+      "tiebreaker": "The North is dense Amazon rainforest and big rivers; the Northeast interior is open dry scrub. Tocantins (dry cerrado) is the fuzzy middle case."
+    },
+    {
+      "country": "Mexico",
+      "shared_traits": "Hot, arid scrub with cacti can resemble northern Mexico",
+      "tiebreaker": "Language — Portuguese vs Spanish. Mexican plates, road signs, topes and OXXO stores have no Brazilian equivalent; Brazil keeps its ladder-and-holes poles."
+    }
+  ]
+}

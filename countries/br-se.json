@@ -1,0 +1,83 @@
+{
+  "id": "br-se",
+  "name": "Southeast Brazil (São Paulo · Rio · Minas Gerais)",
+  "aliases": ["Sudeste", "Southeast Region Brazil"],
+  "continent": "South America",
+  "tier": 1,
+  "status": "draft",
+  "parent": "br",
+  "sources": [
+    "https://geometas.com/metas/countries/brazil/",
+    "https://geopinning.space/en/rule/cs_america/brazil/",
+    "https://en.wikipedia.org/wiki/Southeast_Region,_Brazil",
+    "https://geotips.net/south-america/"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇧🇷",
+    "capital": "São Paulo"
+  },
+
+  "language": {
+    "official_languages": ["Portuguese"],
+    "script": "Latin",
+    "sample_text": "ATENÇÃO — OBRAS NA PISTA",
+    "script_notes": "Brazilian Portuguese, identical to the national profile — ã, õ, ç, -ção endings, black-backed direction signs, BR-XXX highway shields. Route numbers 1–2 sit around São Paulo and Rio, so low BR numbers point here.",
+    "false_friends": ["South Brazil", "Northeast Brazil", "Argentina"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "No standard bollard, as elsewhere in Brazil.",
+    "bollard_shape": "Not applicable.",
+    "guardrail_type": "Steel W-beam on rural roads; a lot of concrete Jersey barrier on the dense motorway network (Bandeirantes, Dutra, Imigrantes).",
+    "line_paint": "Yellow centre line with white edge lines; yellow-on-black hazard chevrons.",
+    "curb_style": "Painted black-and-white or yellow kerbs common throughout the cities.",
+    "km_marker_style": "The national ladder-and-holes concrete pole. Very dense Petrobras/Ipiranga and Itaú branding; toll plazas frequent on the private highways."
+  },
+
+  "architecture": {
+    "roof_style": "Low-pitched gables in towns; flat concrete slabs on apartment blocks and self-built housing.",
+    "roof_material": "Terracotta tile, with fibre-cement and concrete slabs on newer builds.",
+    "wall_construction": "Plastered painted masonry in wealthier areas; extensive bare-brick self-built housing on the urban periphery.",
+    "wall_color_palette": "Bare brick, whitewash, and bright colours; grey concrete high-rises.",
+    "distinctive_building_types": "Favelas stacked up steep hillsides in Rio and São Paulo; dense high-rise skylines; Baroque colonial towns in Minas Gerais (Ouro Preto, Tiradentes); coffee-farm houses (fazendas)."
+  },
+
+  "nature": {
+    "vegetation": "Atlantic Forest (Mata Atlântica) on the coastal ranges; heavily cleared interior with pasture, sugarcane, eucalyptus plantations and — in Minas and Espírito Santo — coffee plantations.",
+    "terrain": "Hilly. The Serra do Mar coastal escarpment rises abruptly behind a narrow coastal plain; the interior is rolling plateau cut by the Paraíba and Paraná valleys.",
+    "climate_signature": "Humid subtropical to tropical, with a warm wet summer and a drier, milder winter. Strong, deep reddish-orange roadside soil is a classic tell for this region and the adjoining centre-west."
+  },
+
+  "vehicles": {
+    "common_brands": ["Volkswagen", "Fiat", "Chevrolet"],
+    "plate_color": "Mercosur white plate with a blue 'BRASIL' strip; older grey plates still common; red plates on taxis, buses and trucks.",
+    "plate_format": "Mercosur ABC1D23; older ABC-1234.",
+    "distinctive_vehicles": "The full national mix plus heavier traffic — buses, trucks and app cars in the metros. Motorcycle couriers common in the cities."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4; some older Gen 2.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "The best-covered part of Brazil by far — dense in every city and along the whole road network, mostly white car."
+  },
+
+  "confusion_set": [
+    {
+      "country": "South Brazil",
+      "shared_traits": "Same language, plates, poles and Atlantic Forest on the coast",
+      "tiebreaker": "The Southeast is warmer, has hillside favelas and big tropical cities, and no araucaria pines or German/Italian colonial architecture; the South is cooler and European-settled."
+    },
+    {
+      "country": "Central-West Brazil",
+      "shared_traits": "Identical red soil, pasture and eucalyptus, same infrastructure",
+      "tiebreaker": "The Centre-West is flatter Cerrado with vast soy/cattle farms and thinner coverage; the Southeast has mountains (Serra do Mar), coast and dense population."
+    },
+    {
+      "country": "Northeast Brazil",
+      "shared_traits": "Same country furniture and language",
+      "tiebreaker": "The Northeast interior is dry Caatinga scrub with pale soil and poorer roads; the Southeast is green, hilly and developed with red soil."
+    }
+  ]
+}

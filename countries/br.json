@@ -1,0 +1,82 @@
+{
+  "id": "br",
+  "name": "Brazil",
+  "aliases": ["Brasil"],
+  "continent": "South America",
+  "tier": 1,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/countries/brazil/",
+    "https://geopinning.space/en/rule/cs_america/brazil/",
+    "https://geodummy.com/brazil",
+    "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Brazil"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇧🇷",
+    "capital": "Brasília"
+  },
+
+  "language": {
+    "official_languages": ["Portuguese"],
+    "script": "Latin",
+    "sample_text": "ATENÇÃO — OBRAS NA PISTA",
+    "script_notes": "Brazilian Portuguese — the tilde vowels ã and õ and the cedilla ç are the quick separators from Spanish-speaking neighbours (no ñ; word endings like -ção, -ões). Federal highways are signed 'BR-XXX'; direction signs sit on black backgrounds.",
+    "false_friends": ["Portugal", "Argentina", "Paraguay", "Colombia"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Brazil has no standard roadside bollard; one only rarely appears.",
+    "bollard_shape": "Not applicable — no national bollard design.",
+    "guardrail_type": "Standard steel W-beam on rural roads; concrete Jersey barriers common on divided highways.",
+    "line_paint": "Yellow centre line, single or double, with white edge lines (edge lines occasionally yellow). Hazard chevrons are yellow on a black board — shared with Portugal and Cambodia, so lean on soil and vegetation to separate them.",
+    "curb_style": "Kerbs in towns are often painted, black-and-white or solid yellow.",
+    "km_marker_style": "The concrete utility pole is the signature: the lower half has a 'ladder' of wide indented segments and the upper half has small round holes punched down it, tapering narrower toward the top. Petrobras (green) and Ipiranga stations, and orange Banco Itaú branding, are widespread."
+  },
+
+  "architecture": {
+    "roof_style": "Low-pitched gable roofs on houses; flat concrete slabs on modern and urban builds.",
+    "roof_material": "Terracotta ceramic tile is the default; fibre-cement sheeting and poured concrete slabs on cheaper and newer housing.",
+    "wall_construction": "Masonry — plastered and painted brick, or bare unrendered brick/breeze-block on unfinished houses (often with rebar left protruding for a future storey).",
+    "wall_color_palette": "Bare reddish-brown brick, whitewash, and bright saturated colours.",
+    "distinctive_building_types": "Unfinished brick houses with exposed rebar; hillside favelas in the big Southeastern cities; Portuguese colonial centres with azulejo tiling on the coast."
+  },
+
+  "nature": {
+    "vegetation": "Six biomes, region-dependent: Amazon rainforest, Cerrado savanna, Atlantic Forest (Mata Atlântica), semi-arid Caatinga, southern Pampa grassland, and the Pantanal wetland.",
+    "terrain": "Mostly plateau (the Planalto) and lowland basins. The Serra do Mar escarpment drops steeply to the coast in the Southeast; the Amazon basin is flat.",
+    "climate_signature": "Tropical to subtropical. Reddish-orange lateritic soil at the roadside is one of the strongest Brazil tells across the centre and Southeast; the far south and the Caatinga are the exceptions."
+  },
+
+  "vehicles": {
+    "common_brands": ["Volkswagen", "Fiat", "Chevrolet"],
+    "plate_color": "Mercosur plates since 2018 — white with a blue top strip reading 'BRASIL' and a small flag. Older grey plates are still common. Commercial vehicles, taxis and buses use red plates with red characters.",
+    "plate_format": "Mercosur ABC1D23 (letter-letter-letter-digit-letter-digit-digit); older plates ABC-1234.",
+    "distinctive_vehicles": "Lots of VW Gol, Fiat Uno/Strada and other small older cars. Motorcycles are everywhere, especially in the Northeast."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mix of Gen 2, Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring, nothing unusual noted.",
+    "coverage_notes": "Usually a white Google car, with some black-car coverage. Dense in the Southeast and along the coast; sparse across the Amazon (a few highways and river towns) and the Pantanal."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Portugal",
+      "shared_traits": "Portuguese language, yellow-on-black hazard chevrons, similar road signage wording",
+      "tiebreaker": "Portugal is European — EU plates, cobbled pavements, Mediterranean vegetation, no red lateritic soil, and hilly Atlantic scenery rather than tropical plateau."
+    },
+    {
+      "country": "Argentina",
+      "shared_traits": "Southern Brazil's Pampa grassland closely matches Argentina; both drive on the right",
+      "tiebreaker": "Language — Portuguese vs Spanish (no ñ in Portuguese). Argentina uses different plates and lacks Brazil's ladder-and-holes concrete poles and reddish soil."
+    },
+    {
+      "country": "Paraguay",
+      "shared_traits": "Red soil, tropical vegetation, Mercosur plates along the shared border",
+      "tiebreaker": "Paraguay signage is in Spanish/Guaraní, its plates and poles differ, and coverage is far patchier and lower-quality than Brazil's."
+    }
+  ]
+}

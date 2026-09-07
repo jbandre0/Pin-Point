@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState, type ReactNode } from "react";
+import { useMemo } from "react";
 import type { Country, FactCategory } from "@/lib/types";
 import { FACT_CATEGORIES } from "@/lib/types";
 import { enumerateFacts, type Fact } from "@/lib/facts";
-import { effectiveCountry } from "@/lib/countryView";
 import { cycleFactState, useFactStateMap } from "@/lib/factState";
 import { countrySimulatedMiles } from "@/lib/simulatedDistance";
 import FamiliarityToggle from "./FamiliarityToggle";
@@ -19,26 +18,31 @@ const CATEGORY_LABEL: Record<FactCategory, string> = {
   google_coverage: "Google coverage",
 };
 
-const CARD =
-  "rounded-xl border border-slate-800 bg-slate-900/40 p-5 sm:p-6";
+const CARD = "rounded-xl border border-slate-800 bg-slate-900/40 p-5 sm:p-6";
 const CARD_HEADING =
   "font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/70";
 
-export default function CountryDetail({ country }: { country: Country }) {
-  const factState = useFactStateMap();
-  const [regionId, setRegionId] = useState<string | null>(null);
+export interface FamilyEntry {
+  id: string;
+  name: string;
+  isNational: boolean;
+}
 
-  const view = useMemo(
-    () => effectiveCountry(country, regionId),
-    [country, regionId],
-  );
+export default function CountryDetail({
+  country,
+  family,
+}: {
+  country: Country;
+  family: FamilyEntry[];
+}) {
+  const factState = useFactStateMap();
 
   const factsByCategory = useMemo(() => {
     const groups = {} as Record<FactCategory, Fact[]>;
     for (const cat of FACT_CATEGORIES) groups[cat] = [];
-    for (const f of enumerateFacts(view)) groups[f.category].push(f);
+    for (const f of enumerateFacts(country)) groups[f.category].push(f);
     return groups;
-  }, [view]);
+  }, [country]);
 
   const { learnable, mastered, miles } = useMemo(() => {
     const learnableFacts = FACT_CATEGORIES.flatMap((c) =>
@@ -56,6 +60,7 @@ export default function CountryDetail({ country }: { country: Country }) {
   }, [factsByCategory, factState]);
 
   const isDraft = country.status === "draft";
+  const nationalName = family.find((f) => f.isNational)?.name;
 
   return (
     <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
@@ -68,7 +73,12 @@ export default function CountryDetail({ country }: { country: Country }) {
 
       {/* ---- header ---- */}
       <header className="mt-5 border-b border-slate-800 pb-6">
-        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        {country.parent && nationalName && (
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500">
+            Region of {nationalName}
+          </p>
+        )}
+        <div className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <h1 className="text-3xl font-semibold text-slate-50">
             <span className="mr-2">{country.quick_id.flag_emoji}</span>
             {country.name}
@@ -112,24 +122,29 @@ export default function CountryDetail({ country }: { country: Country }) {
         </p>
       </header>
 
-      {/* ---- regional variant tabs (untested — no data has variants yet) ---- */}
-      {country.regional_variants.length > 0 && (
+      {/* ---- family nav (national + regions) ---- */}
+      {family.length > 1 && (
         <nav className="mt-6 flex flex-wrap gap-2">
-          <TabButton
-            active={regionId === null}
-            onClick={() => setRegionId(null)}
-          >
-            National
-          </TabButton>
-          {country.regional_variants.map((v) => (
-            <TabButton
-              key={v.region_id}
-              active={regionId === v.region_id}
-              onClick={() => setRegionId(v.region_id)}
-            >
-              {v.region_name}
-            </TabButton>
-          ))}
+          {family.map((f) => {
+            const active = f.id === country.id;
+            return (
+              <Link
+                key={f.id}
+                href={`/country/${f.id}`}
+                aria-current={active ? "page" : undefined}
+                title={f.name}
+                className={`rounded-full border px-3 py-1 text-xs transition-colors ${
+                  active
+                    ? "border-cyan-400/60 bg-cyan-400/10 text-cyan-100"
+                    : "border-slate-700 text-slate-400 hover:border-slate-500 hover:text-slate-200"
+                }`}
+              >
+                {f.isNational
+                  ? `${f.name} · national`
+                  : shortRegionLabel(f.name, nationalName)}
+              </Link>
+            );
+          })}
         </nav>
       )}
 
@@ -152,11 +167,11 @@ export default function CountryDetail({ country }: { country: Country }) {
         ))}
 
         {/* ---- confusion set ---- */}
-        {view.confusion_set.length > 0 && (
+        {country.confusion_set.length > 0 && (
           <section className={CARD}>
             <h2 className={CARD_HEADING}>Confusion set</h2>
             <ul className="mt-3 space-y-4">
-              {view.confusion_set.map((c, i) => (
+              {country.confusion_set.map((c, i) => (
                 <li
                   key={`${c.country}-${i}`}
                   className="border-l-2 border-slate-700 pl-3"
@@ -208,28 +223,14 @@ export default function CountryDetail({ country }: { country: Country }) {
   );
 }
 
-function TabButton({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`rounded-full border px-3 py-1 text-xs transition-colors ${
-        active
-          ? "border-cyan-400/60 bg-cyan-400/10 text-cyan-100"
-          : "border-slate-700 text-slate-400 hover:border-slate-500 hover:text-slate-200"
-      }`}
-    >
-      {children}
-    </button>
-  );
+/** "Southeast Brazil (São Paulo · …)" -> "Southeast" for the nav pill. */
+function shortRegionLabel(name: string, nationalName?: string): string {
+  const parenIdx = name.indexOf(" (");
+  let short = parenIdx > 0 ? name.slice(0, parenIdx) : name;
+  if (nationalName && short.endsWith(` ${nationalName}`)) {
+    short = short.slice(0, -(nationalName.length + 1));
+  }
+  return short;
 }
 
 function FactRow({

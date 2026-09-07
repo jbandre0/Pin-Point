@@ -1,8 +1,9 @@
 import Quiz from "@/components/Quiz";
-import { getAllCountries } from "@/lib/countries";
+import { getAllRecords } from "@/lib/countries";
 
 export const metadata = { title: "Quiz · Pin Point" };
 
 export default function QuizPage() {
-  return <Quiz countries={getAllCountries()} />;
+  // Regions are first-class quiz targets, so feed every record.
+  return <Quiz countries={getAllRecords()} />;
 }

@@ -1,0 +1,82 @@
+{
+  "id": "br-n",
+  "name": "North Brazil (Amazonas · Pará · Rondônia)",
+  "aliases": ["Norte", "Amazônia", "North Region Brazil"],
+  "continent": "South America",
+  "tier": 1,
+  "status": "draft",
+  "parent": "br",
+  "sources": [
+    "https://geometas.com/metas/countries/brazil/",
+    "https://geopinning.space/en/rule/cs_america/brazil/",
+    "https://geodummy.com/brazil"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇧🇷",
+    "capital": "Manaus"
+  },
+
+  "language": {
+    "official_languages": ["Portuguese"],
+    "script": "Latin",
+    "sample_text": "ATENÇÃO — OBRAS NA PISTA",
+    "script_notes": "Brazilian Portuguese as national. In the far north-west, indigenous-language place names appear; standard Portuguese signage and BR-XXX shields still apply.",
+    "false_friends": ["Peru", "Colombia", "Bolivia"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "No standard bollard, as elsewhere in Brazil.",
+    "bollard_shape": "Not applicable.",
+    "guardrail_type": "Rare — most covered roads are single-carriageway highways through forest with no barrier.",
+    "line_paint": "Yellow centre line and white edge lines on the paved highways (BR-319, BR-364, BR-163); long stretches are unpaved red dirt with no markings at all.",
+    "curb_style": "Kerbs only in the river cities (Manaus, Belém, Porto Velho).",
+    "km_marker_style": "The national ladder-and-holes concrete pole in towns. Elsewhere expect dead-straight red-dirt roads cut through rainforest, river ports and vehicle ferries."
+  },
+
+  "architecture": {
+    "roof_style": "Simple gables; deep eaves and verandas against the rain.",
+    "roof_material": "Fibre-cement and metal sheeting; some terracotta tile in the cities.",
+    "wall_construction": "Timber, including houses raised on stilts (palafitas) along riverbanks that flood seasonally; brick and render in town centres.",
+    "wall_color_palette": "Weathered bare timber, whitewash and faded bright paint.",
+    "distinctive_building_types": "Stilt houses over water and mud; wooden riverboats and floating river ports; Manaus's colonial-era centre and opera house."
+  },
+
+  "nature": {
+    "vegetation": "Dense equatorial Amazon rainforest over almost the whole region — a solid green wall along the road — with huge rivers. Tocantins in the south-east is the exception, with drier cerrado savanna.",
+    "terrain": "Flat lowland Amazon basin; the Guiana Highlands and tepuis rise only in the far north (Roraima).",
+    "climate_signature": "Hot, humid and wet year-round, near the equator; frequent heavy rain and overcast skies. Roadside dirt is strongly red-orange lateritic."
+  },
+
+  "vehicles": {
+    "common_brands": ["Volkswagen", "Fiat", "Chevrolet"],
+    "plate_color": "Mercosur white plate with a blue 'BRASIL' strip; older grey plates; red commercial plates.",
+    "plate_format": "Mercosur ABC1D23; older ABC-1234.",
+    "distinctive_vehicles": "Motorcycles and river boats do much of the work; comparatively few cars, and many are older."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4 where present.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Very sparse — essentially the handful of trans-Amazon highways, the area around Manaus and Belém, and some river towns, with large blank regions between. Mostly white car; some boat and trekker coverage."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Peru",
+      "shared_traits": "Amazonian Peru looks identical — the same rainforest wall, red dirt roads and river towns",
+      "tiebreaker": "Language — Portuguese vs Spanish. Peru uses different plates and signage; Brazil keeps BR-XXX shields and ladder-and-holes concrete poles."
+    },
+    {
+      "country": "Colombia",
+      "shared_traits": "Southern Colombian Amazon has the same jungle, rivers and sparse coverage",
+      "tiebreaker": "Spanish signage and Colombian plates; Colombia's Amazon coverage is even thinner and its road furniture differs."
+    },
+    {
+      "country": "Southeast Brazil",
+      "shared_traits": "Same country — language, plates, poles",
+      "tiebreaker": "The North is unbroken rainforest, big rivers, stilt houses and very thin coverage; the Southeast is hilly, developed, densely covered and full of cities."
+    }
+  ]
+}

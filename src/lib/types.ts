@@ -61,21 +61,18 @@ export interface ConfusionEntry {
   tiebreaker: string;
 }
 
-export interface RegionalVariant {
-  region_id: string;
-  region_name: string;
-  parent: string;
-  notes_override: Record<string, unknown>;
-}
-
 export interface Country {
-  id: string; // ISO 3166-1 alpha-2, lowercase
+  id: string; // ISO 3166-1 alpha-2 for a country; "{cc}-{region}" for a region
   name: string;
   aliases: string[];
   continent: string;
   tier: 1 | 2 | 3;
   status: CountryStatus;
   sources: string[];
+  // Set only on regional profiles — the parent country's id (e.g. "br").
+  // A region is a full standalone profile with its own fact ids
+  // ("br-se.architecture.roof_style"); the parent keeps it off the map.
+  parent?: string;
   quick_id: QuickId;
   language: LanguageSection;
   road_furniture: RoadFurnitureSection;
@@ -84,7 +81,6 @@ export interface Country {
   vehicles: VehiclesSection;
   google_coverage: GoogleCoverageSection;
   confusion_set: ConfusionEntry[];
-  regional_variants: RegionalVariant[];
 }
 
 // The six quiz-able leaf categories, in the fixed render order used on every

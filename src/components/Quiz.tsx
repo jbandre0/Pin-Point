@@ -235,7 +235,7 @@ export default function Quiz({ countries }: { countries: Country[] }) {
           </button>
           <span className="font-mono text-xs text-slate-400">
             {isRecall
-              ? `${countryCount} countr${countryCount === 1 ? "y" : "ies"} in pool`
+              ? `${countryCount} profile${countryCount === 1 ? "" : "s"} in pool`
               : isDisc
                 ? `${discCount} round${discCount === 1 ? "" : "s"} in pool`
                 : `${pool.length} fact${pool.length === 1 ? "" : "s"} in pool`}

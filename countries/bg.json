@@ -12,21 +12,25 @@
     "https://geodummy.com/bulgaria",
     "https://en.wikipedia.org/wiki/Road_signs_in_Bulgaria"
   ],
-
   "quick_id": {
     "driving_side": "right",
     "flag_emoji": "🇧🇬",
     "capital": "Sofia"
   },
-
   "language": {
-    "official_languages": ["Bulgarian"],
+    "official_languages": [
+      "Bulgarian"
+    ],
     "script": "Cyrillic",
     "sample_text": "ВНИМАНИЕ — ОПАСНО",
     "script_notes": "Cyrillic-only on official signage, no Latin transliteration alongside it (unlike some other Cyrillic-using countries that dual-post). Distinguishing it from Russian/Ukrainian/Serbian Cyrillic by eye alone is hard — lean on other clues, not the alphabet, to separate Bulgaria from its Cyrillic neighbors.",
-    "false_friends": ["Russia", "Ukraine", "Serbia", "North Macedonia"]
+    "false_friends": [
+      "Russia",
+      "Ukraine",
+      "Serbia",
+      "North Macedonia"
+    ]
   },
-
   "road_furniture": {
     "bollard_color": "White post with a red rectangle reflector on the front face and a white rectangle on the back face.",
     "bollard_shape": "Standard flat-faced post, not cylindrical.",
@@ -35,7 +39,6 @@
     "curb_style": "No strongly distinctive curb style noted; roads are frequently in poor condition with visible potholes and uneven surfaces outside major routes.",
     "km_marker_style": "Utility poles are often concrete, sometimes with the 'holey pole' look also seen elsewhere in Eastern Europe — not unique to Bulgaria."
   },
-
   "architecture": {
     "roof_style": "No single dominant iconic roofline; general Eastern Bloc-influenced mix.",
     "roof_material": "Mixed tile and corrugated/metal roofing.",
@@ -43,26 +46,22 @@
     "wall_color_palette": "Muted, often weathered pastel or bare concrete tones.",
     "distinctive_building_types": "Notable Soviet-era prefabricated apartment blocks in urban areas; rural areas often look visibly less prosperous than Western/Central Europe."
   },
-
   "nature": {
     "vegetation": "Deciduous forest in hill/mountain regions; agricultural plains in the north and south.",
     "terrain": "Mixed — Balkan mountain ranges plus flat agricultural lowlands (Danubian Plain, Thracian Plain).",
     "climate_signature": "Notably heavy winter Street View coverage — bare/dead trees and snow are common even outside deep winter, more so than most of the rest of Europe. This 'bleak' look is itself a mild tell."
   },
-
   "vehicles": {
     "common_brands": [],
     "plate_color": "Standard EU-format white plates with blue EU strip.",
     "plate_format": "Standard EU format, not individually diagnostic.",
     "distinctive_vehicles": "All licensed taxis are legally required to be yellow. No other strong car-based meta — occasional duct-tape 'flag' on car antennas is an Eastern-Europe-wide signal, not Bulgaria-specific."
   },
-
   "google_coverage": {
     "camera_generation": "Mixed generations; not a primary diagnostic without more specific research.",
     "blur_style": "Standard Google blurring, nothing unusual noted.",
     "coverage_notes": "Google car is white (unlike Russia/Ukraine, which use different liveries in places) — useful only as a negative signal, not a positive Bulgaria confirmation."
   },
-
   "confusion_set": [
     {
       "country": "Russia",
@@ -79,7 +78,5 @@
       "shared_traits": "Balkan terrain, Cyrillic script, similar economic/infrastructure feel",
       "tiebreaker": "Check bollard design and sign-color conventions (blue for larger cities, white for villages in Bulgaria) as the tiebreak rather than terrain."
     }
-  ],
-
-  "regional_variants": []
+  ]
 }
