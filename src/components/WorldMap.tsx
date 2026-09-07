@@ -9,17 +9,22 @@ import {
   ZoomableGroup,
 } from "react-simple-maps";
 import { geoIdToAlpha2, WORLD_TOPOJSON_URL } from "@/lib/geo";
+import { useFactStateMap } from "@/lib/factState";
+import { countryAverageWeight } from "@/lib/simulatedDistance";
 
 interface CountryMeta {
   id: string;
   name: string;
   tier: 1 | 2 | 3;
   status: "draft" | "reviewed";
+  factIds: string[]; // learnable (non-blank) fact ids, for the knowledge shade
 }
 
 interface WorldMapProps {
   countries: CountryMeta[];
 }
+
+type ShadeMode = "tier" | "knowledge";
 
 // Tier drives brightness — tier 1 pulls the eye first.
 const TIER_FILL: Record<1 | 2 | 3, string> = {
@@ -31,16 +36,47 @@ const TIER_FILL: Record<1 | 2 | 3, string> = {
 const NO_DATA_FILL = "#141c2b";
 const NO_DATA_STROKE = "#26314a";
 const OCEAN = "#0a111e";
+const HOVER_FILL = "#a5f3fc";
+
+// Knowledge ramp: unknown blue-grey -> cyan -> mint at mastery.
+function hexToRgb(hex: string): [number, number, number] {
+  const n = parseInt(hex.slice(1), 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+function lerp(a: string, b: string, t: number): string {
+  const [ar, ag, ab] = hexToRgb(a);
+  const [br, bg, bb] = hexToRgb(b);
+  const m = (x: number, y: number) => Math.round(x + (y - x) * t);
+  return `rgb(${m(ar, br)} ${m(ag, bg)} ${m(ab, bb)})`;
+}
+function knowledgeFill(weight: number): string {
+  const t = Math.min(1, Math.max(0, weight));
+  return t < 0.5
+    ? lerp("#33415e", "#22d3ee", t * 2)
+    : lerp("#22d3ee", "#a7f3d0", (t - 0.5) * 2);
+}
 
 export default function WorldMap({ countries }: WorldMapProps) {
   const router = useRouter();
+  const factState = useFactStateMap();
   const [hovered, setHovered] = useState<string | null>(null);
+  const [shadeBy, setShadeBy] = useState<ShadeMode>("tier");
 
   const byId = useMemo(() => {
     const m = new Map<string, CountryMeta>();
     for (const c of countries) m.set(c.id, c);
     return m;
   }, [countries]);
+
+  const knowledge = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const c of countries) {
+      m.set(c.id, countryAverageWeight(c.factIds, factState));
+    }
+    return m;
+  }, [countries, factState]);
+
+  const hoveredMeta = hovered ? byId.get(hovered) : undefined;
 
   return (
     <div className="absolute inset-0" style={{ background: OCEAN }}>
@@ -74,9 +110,12 @@ export default function WorldMap({ countries }: WorldMapProps) {
                 const meta = alpha2 ? byId.get(alpha2) : undefined;
                 const hasData = Boolean(meta);
                 const isHover = hasData && hovered === alpha2;
-                const fill = meta
-                  ? TIER_FILL[meta.tier]
-                  : NO_DATA_FILL;
+
+                const fill = !meta
+                  ? NO_DATA_FILL
+                  : shadeBy === "knowledge"
+                    ? knowledgeFill(knowledge.get(meta.id) ?? 0)
+                    : TIER_FILL[meta.tier];
 
                 return (
                   <Geography
@@ -100,7 +139,7 @@ export default function WorldMap({ countries }: WorldMapProps) {
                     }}
                     style={{
                       default: {
-                        fill: isHover ? "#a5f3fc" : fill,
+                        fill: isHover ? HOVER_FILL : fill,
                         stroke: hasData ? "#0a111e" : NO_DATA_STROKE,
                         strokeWidth: hasData ? 0.5 : 0.35,
                         outline: "none",
@@ -108,16 +147,13 @@ export default function WorldMap({ countries }: WorldMapProps) {
                         transition: "fill 120ms ease",
                       },
                       hover: {
-                        fill: hasData ? "#a5f3fc" : NO_DATA_FILL,
+                        fill: hasData ? HOVER_FILL : NO_DATA_FILL,
                         stroke: hasData ? "#e0fbff" : NO_DATA_STROKE,
                         strokeWidth: hasData ? 0.75 : 0.35,
                         outline: "none",
                         cursor: hasData ? "pointer" : "default",
                       },
-                      pressed: {
-                        fill: "#22d3ee",
-                        outline: "none",
-                      },
+                      pressed: { fill: "#22d3ee", outline: "none" },
                     }}
                   />
                 );
@@ -127,16 +163,61 @@ export default function WorldMap({ countries }: WorldMapProps) {
         </ZoomableGroup>
       </ComposableMap>
 
-      {hovered && byId.has(hovered) && (
+      {hoveredMeta && (
         <div className="pointer-events-none absolute left-1/2 top-6 -translate-x-1/2 rounded-full border border-cyan-400/30 bg-slate-950/80 px-4 py-1.5 text-sm font-medium tracking-wide text-cyan-100 backdrop-blur">
-          {byId.get(hovered)!.name}
-          {byId.get(hovered)!.status === "draft" && (
-            <span className="ml-2 text-amber-400" title="unverified — fact-check before trusting">
+          {hoveredMeta.name}
+          {shadeBy === "knowledge" && (
+            <span className="ml-2 font-mono text-cyan-300/80">
+              {Math.round((knowledge.get(hoveredMeta.id) ?? 0) * 100)}% known
+            </span>
+          )}
+          {hoveredMeta.status === "draft" && (
+            <span
+              className="ml-2 text-amber-400"
+              title="unverified — fact-check before trusting"
+            >
               ● draft
             </span>
           )}
         </div>
       )}
+
+      {/* shade toggle */}
+      <div className="absolute bottom-3 left-4 flex items-center gap-2">
+        <div className="flex overflow-hidden rounded-full border border-slate-700/70 bg-slate-950/70 backdrop-blur">
+          {(["tier", "knowledge"] as ShadeMode[]).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              onClick={() => setShadeBy(mode)}
+              className={`px-3 py-1 font-mono text-[10px] uppercase tracking-[0.16em] transition-colors ${
+                shadeBy === mode
+                  ? "bg-cyan-400/15 text-cyan-100"
+                  : "text-slate-400 hover:text-slate-200"
+              }`}
+            >
+              {mode}
+            </button>
+          ))}
+        </div>
+        {shadeBy === "knowledge" && (
+          <div className="flex items-center gap-1.5">
+            <span className="font-mono text-[10px] uppercase tracking-wide text-slate-500">
+              less
+            </span>
+            <span
+              className="h-1.5 w-16 rounded-full"
+              style={{
+                background:
+                  "linear-gradient(to right, #33415e, #22d3ee, #a7f3d0)",
+              }}
+            />
+            <span className="font-mono text-[10px] uppercase tracking-wide text-slate-500">
+              more
+            </span>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
