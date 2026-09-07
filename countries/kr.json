@@ -1,0 +1,81 @@
+{
+  "id": "kr",
+  "name": "South Korea",
+  "aliases": ["Korea", "Republic of Korea", "한국", "대한민국"],
+  "continent": "Asia",
+  "tier": 1,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/countries/south_korea/",
+    "https://geodummy.com/south-korea",
+    "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_South_Korea"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇰🇷",
+    "capital": "Seoul"
+  },
+
+  "language": {
+    "official_languages": ["Korean"],
+    "script": "Hangul",
+    "sample_text": "공사중 서행",
+    "script_notes": "Hangul is unmistakable — square syllable blocks packed with small circles (ㅇ) and straight strokes, nothing like Japanese kana or Chinese characters. Occasional Hanja (Chinese characters) on older signs. This alone separates South Korea from Japan and China; verify the sample against real signage.",
+    "false_friends": ["Japan", "China", "Taiwan"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Flexible steel or plastic posts at crossings and refuges; not a strong national tell.",
+    "bollard_shape": "Slim flexible post.",
+    "guardrail_type": "Steel W-beam and cable barrier; very frequent tunnels, bridges and avalanche/rock galleries because of the terrain.",
+    "line_paint": "White lane lines. Some roads carry pink and green painted guide lines that steer drivers toward exits — a distinctive Korean navigation aid. Blue directional signs; yellow diamond warning signs.",
+    "curb_style": "No strongly distinctive kerb style.",
+    "km_marker_style": "Cluttered concrete utility poles carrying many transformers and thick bundles of overhead wire. Dense, uniform apartment blocks (아파트) with very large painted building numbers on their sides are the strongest landscape marker."
+  },
+
+  "architecture": {
+    "roof_style": "High-rise apartment slabs in and around every town; low single-storey houses in the countryside; sweeping tiled roofs on hanok and temples.",
+    "roof_material": "Concrete on the towers; painted sheet metal (often blue or green) or grey tile on rural houses.",
+    "wall_construction": "Reinforced concrete apartment towers; brick, block and concrete houses.",
+    "wall_color_palette": "Beige and tan apartment towers; blue and green rural roofs.",
+    "distinctive_building_types": "Huge clusters of near-identical numbered apartment blocks; white vinyl polytunnel greenhouses blanketing valley floors; Buddhist temples with multicoloured dancheong eaves; churches topped with red crosses."
+  },
+
+  "nature": {
+    "vegetation": "Forested hills of pine and deciduous trees over most of the country; irrigated rice paddies on the valley floors, often interspersed with plastic greenhouses.",
+    "terrain": "About seventy percent mountainous — a tight grid of forested ridges and narrow valleys, with constant tunnels and bridges. The west and south coasts are deeply indented with tidal flats and islands.",
+    "climate_signature": "Much of the coverage is old (roughly 2008–2012) and shot in winter — bare trees, brown grass, flat grey light and noticeably lower resolution. That dated look is itself a strong South Korea tell."
+  },
+
+  "vehicles": {
+    "common_brands": ["Hyundai", "Kia", "Genesis"],
+    "plate_color": "White with black characters; green plates with white characters are still common because so much coverage is old. A Korean syllable block sits between the number groups.",
+    "plate_format": "Older plates 12가3456; newer, longer plates 123가4567.",
+    "distinctive_vehicles": "An overwhelmingly domestic fleet — Hyundai, Kia, Genesis, plus older Samsung/Renault and SsangYong — mostly white, silver, grey or black. Very few foreign cars."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Extensive but largely outdated — a lot of Gen 2 and early Gen 3 from around 2008–2012, with newer Gen 4 on recently re-covered roads.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Black-and-white camera car occasionally visible. Predominantly winter imagery, low resolution over large areas."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Japan",
+      "shared_traits": "Very mountainous, tunnels everywhere, rice paddies, East Asian urban density, right-of-way for pedestrians",
+      "tiebreaker": "South Korea drives on the RIGHT and writes in Hangul; Japan drives on the LEFT and uses kana and kanji. Japanese coverage is newer and higher-resolution, with different road markings."
+    },
+    {
+      "country": "China",
+      "shared_traits": "East Asian script at a glance, mountainous terrain, apartment-block skylines, right-hand traffic",
+      "tiebreaker": "Chinese Hanzi vs Korean Hangul (circles). China's official coverage is minimal, so extensive Street View of a mountainous East Asian country is almost always South Korea."
+    },
+    {
+      "country": "Taiwan",
+      "shared_traits": "Mountainous East Asian island-scale terrain, dense scooter and apartment culture, tunnels",
+      "tiebreaker": "Taiwan uses traditional Chinese characters and has swarms of scooters; South Korea uses Hangul, has a domestic-brand car fleet and much older imagery."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "gh",
+  "name": "Ghana",
+  "aliases": [],
+  "continent": "Africa",
+  "tier": 1,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/countries/ghana/",
+    "https://geopinning.space/en/rule/africa/ghana/",
+    "https://geodummy.com/ghana",
+    "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Ghana",
+    "https://geotips.net/africa/"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇬🇭",
+    "capital": "Accra"
+  },
+
+  "language": {
+    "official_languages": ["English"],
+    "script": "Latin",
+    "sample_text": "CAUTION — ROAD WORKS AHEAD",
+    "script_notes": "All road signage is in English, which is the quick separator from the French-speaking neighbours (Ivory Coast, Togo, Benin). Local languages like Twi appear on shopfronts but not on official signs. .gh domain; area codes 030 Accra, 032 Kumasi, 037 Tamale.",
+    "false_friends": ["Nigeria", "Ivory Coast", "Togo", "Réunion"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Ghana has no common roadside bollard.",
+    "bollard_shape": "Not applicable.",
+    "guardrail_type": "Standard steel W-beam on the main highways; frequently absent elsewhere.",
+    "line_paint": "Often minimal or absent on rural roads; white centre and edge lines on trunk roads. Town kerbs are usually painted black-and-yellow.",
+    "curb_style": "Painted black-and-yellow kerbs in towns.",
+    "km_marker_style": "Concrete and wooden utility poles. Look for roadside kiosks and shipping-container shops painted in telecom colours (MTN yellow, red, blue) and small lottery stands with red/yellow/green boxes."
+  },
+
+  "architecture": {
+    "roof_style": "Low gables and lean-tos; a lot of unfinished single-storey construction.",
+    "roof_material": "Corrugated metal sheeting, very often rusted to a deep brown; some concrete slabs in towns.",
+    "wall_construction": "Concrete or sandcrete block, frequently left unrendered and unfinished; mud brick in the rural north.",
+    "wall_color_palette": "Bare grey block, whitewash, and bright paint on shops and churches.",
+    "distinctive_building_types": "Half-finished block houses; roadside kiosks and containers used as shops; churches with painted signboards; round mud huts with thatched roofs in the far north."
+  },
+
+  "nature": {
+    "vegetation": "The south is humid — oil palms, banana and dense forest through the cocoa belt. The north is dry savanna with scattered shrubs and bare ground. Lake Volta is a huge water body filling much of the east.",
+    "terrain": "Mostly low plateau and coastal plains; hillier around the Akwapim–Togo ranges in the south-east.",
+    "climate_signature": "Reddish laterite soil at the roadside, strongest through the centre and east. Hazy, dusty skies in the north during the Harmattan season."
+  },
+
+  "vehicles": {
+    "common_brands": ["Toyota", "Nissan", "Opel"],
+    "plate_color": "White with black characters for private vehicles; yellow plates for taxis and commercial vehicles.",
+    "plate_format": "Two-letter region code, four digits, then a two-digit year of registration (e.g. GR 1234-23) — the year suffix is a useful dating tell.",
+    "distinctive_vehicles": "Old Toyotas and Opels; 'trotro' minibuses, often with painted slogans on the back; yellow taxis."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "White Google car with a roof rack that has a piece of BLACK DUCT TAPE on the FRONT-right bar — the fastest way to tell Ghana from Nigeria. (If the tape is on the REAR-right, it is Réunion Island, not Ghana.)"
+  },
+
+  "confusion_set": [
+    {
+      "country": "Nigeria",
+      "shared_traits": "English signage, right-hand traffic, similar unfinished block architecture, rusted metal roofs, red soil",
+      "tiebreaker": "Ghana's Google car has black tape on the FRONT-right roof-rack bar; Nigeria's car differs. Ghana plates carry a two-digit year suffix; Nigeria uses green plates with state names."
+    },
+    {
+      "country": "Ivory Coast",
+      "shared_traits": "West African coast, oil palms and cocoa, red soil, right-hand traffic",
+      "tiebreaker": "Ivory Coast signage is in French; Ghana's is in English. Plate formats and the Google car also differ."
+    },
+    {
+      "country": "Réunion",
+      "shared_traits": "The Street View car's roof-rack tape looks almost identical",
+      "tiebreaker": "On Réunion the tape is on the REAR-right bar, not the front. Réunion is a small mountainous French island with EU plates, euros and French signage."
+    }
+  ]
+}

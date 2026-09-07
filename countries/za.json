@@ -1,0 +1,82 @@
+{
+  "id": "za",
+  "name": "South Africa",
+  "aliases": ["RSA", "Suid-Afrika"],
+  "continent": "Africa",
+  "tier": 1,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/regions/africa/",
+    "https://geodummy.com/south-africa",
+    "https://geomastr.com/country/south-africa/",
+    "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_South_Africa"
+  ],
+
+  "quick_id": {
+    "driving_side": "left",
+    "flag_emoji": "🇿🇦",
+    "capital": "Pretoria"
+  },
+
+  "language": {
+    "official_languages": ["English", "Afrikaans", "Zulu", "Xhosa"],
+    "script": "Latin",
+    "sample_text": "GEVAAR — PADWERKE",
+    "script_notes": "Most road signs are in English; Afrikaans wording (STADIG, GEVAAR, PADWERKE) also turns up, especially in the Western and Northern Cape, and is a South Africa tell. Bantu-language names appear on place signs. .za domain, currency Rand (R).",
+    "false_friends": ["Namibia", "Botswana", "Eswatini", "Australia"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "South Africa has few common roadside bollards; not a useful clue.",
+    "bollard_shape": "Not applicable.",
+    "guardrail_type": "Standard steel W-beam and cable barrier on the N-roads.",
+    "line_paint": "Dashed white centre line with SOLID YELLOW shoulder (edge) lines; a triple-white barrier line on climbing lanes. Traffic lights ('robots') are mounted on YELLOW poles — a handy South Africa detail.",
+    "curb_style": "No strongly distinctive kerb style.",
+    "km_marker_style": "Wooden utility poles in several styles, rural and peri-urban. Big green direction signs with white text and yellow route numbers; blue backgrounds on freeway gantries. Roads are numbered N (national), R (regional) and M (metro)."
+  },
+
+  "architecture": {
+    "roof_style": "Pitched and hipped roofs in the suburbs; flat corrugated roofs on township and rural housing.",
+    "roof_material": "Concrete tile and painted corrugated metal.",
+    "wall_construction": "Brick and plastered masonry. Suburban houses are very commonly ringed by high walls topped with electric fencing or spikes — a strong South Africa signal.",
+    "wall_color_palette": "White, cream and earth tones; bright colours on informal housing.",
+    "distinctive_building_types": "Walled-and-fenced suburban houses; dense informal settlements and rows of small RDP houses; white gabled Cape Dutch homesteads in the Western Cape winelands; round thatched rondavels in the rural Eastern Cape and KwaZulu-Natal."
+  },
+
+  "nature": {
+    "vegetation": "Open Highveld grassland on the interior plateau; dry Karoo scrub through the centre and north-west; fynbos shrubland and vineyards in the Western Cape; bushveld savanna in the north and east; subtropical greenery along the KwaZulu-Natal coast.",
+    "terrain": "A high, flat interior plateau ringed by an escarpment (the Drakensberg in the east), dropping to a narrow coastal belt. Mountainous near most of the coast, especially the Cape.",
+    "climate_signature": "Dry, tawny grass and big skies on the Highveld and Karoo; greener toward the east coast. Winter coverage often looks brown and low."
+  },
+
+  "vehicles": {
+    "common_brands": ["Toyota", "Volkswagen", "Ford"],
+    "plate_color": "Usually all-white front and back; yellow plates on public-service vehicles (minibus taxis). Each province has its own letter suffix — GP Gauteng, WP/CA Western Cape, ZN KwaZulu-Natal, MP Mpumalanga, EC Eastern Cape, L Limpopo, NC Northern Cape, FS Free State, NW North West.",
+    "plate_format": "Province-dependent — e.g. AB 12 CD GP (Gauteng) or CA 123-456 (Western Cape).",
+    "distinctive_vehicles": "Toyota Hilux and other bakkies (pickups) everywhere; white Toyota Quantum / HiAce minibus taxis are ubiquitous."
+  },
+
+  "google_coverage": {
+    "camera_generation": "A large amount of Gen 2 coverage — grainy and low-resolution — which no neighbouring country has, so a distinctly dated, low-res look strongly suggests South Africa. Also Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "White Google car; the roof rack has black duct tape on the front-right bar (Ghana shares this, so use driving side and landscape to separate them). Very extensive coverage across the whole country."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Namibia",
+      "shared_traits": "Left-hand traffic, dry scrub and grassland, similar road signs and plates, sparse population",
+      "tiebreaker": "Only South Africa has large amounts of grainy Gen 2 coverage. South Africa has walled suburbs, minibus taxis and province plate suffixes; Namibia is emptier, sandier and German-influenced in places."
+    },
+    {
+      "country": "Botswana",
+      "shared_traits": "Left-hand traffic, flat bushveld and grassland, English signage",
+      "tiebreaker": "Botswana is flatter, drier and far less developed, with newer coverage and different plates; South Africa has mountains near the coast, dense suburbs and Gen 2 imagery."
+    },
+    {
+      "country": "Australia",
+      "shared_traits": "Left-hand traffic, dry tawny grassland, eucalyptus (widely planted in South Africa), big skies",
+      "tiebreaker": "Australian plates, road signs and the Google car differ; South Africa has walled-and-electric-fenced houses, minibus taxis, rondavels and Afrikaans signage."
+    }
+  ]
+}
