@@ -1,0 +1,88 @@
+{
+  "id": "la",
+  "name": "Laos",
+  "aliases": ["Lao", "Lao PDR", "ປະເທດລາວ"],
+  "continent": "Asia",
+  "tier": 2,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/countries/laos/",
+    "https://geopinning.space/en/rule/asia/laos/",
+    "https://www.plonkit.net/laos",
+    "https://en.wikipedia.org/wiki/Lao_script",
+    "https://en.wikipedia.org/wiki/Comparison_of_Lao_and_Thai"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇱🇦",
+    "capital": "Vientiane"
+  },
+
+  "language": {
+    "official_languages": ["Lao"],
+    "script": "Lao",
+    "sample_text": "ຢຸດ",
+    "script_notes": "Lao is a rounded abugida related to Thai but visibly simpler — fewer characters, more curves, and none of Thai's tall vertical 'flags'. It is clearly not Khmer (which is angular and dense) or Burmese (circular). Sample shown is the stop-sign word ຢຸດ; verify a longer sample against real signage. .la domain.",
+    "false_friends": ["Thailand", "Vietnam", "Cambodia", "Myanmar"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Angular black-and-white, similar to Thailand's.",
+    "bollard_shape": "Angular post, close to the Thai design.",
+    "guardrail_type": "Minimal; many rural and mountain roads have no barrier at all.",
+    "line_paint": "Frequently unmarked; a centre line where roads are properly paved. The back of some road signs is light blue.",
+    "curb_style": "Little kerbing outside the towns.",
+    "km_marker_style": "Distinctive segmented, tapering concrete 'pinecone' utility poles are a signature Laos tell. Concrete kilometre posts on the main routes."
+  },
+
+  "architecture": {
+    "roof_style": "Steep, multi-tiered, overlapping temple (wat) roofs; simple gables on houses.",
+    "roof_material": "Corrugated metal, some clay tile, thatch in villages.",
+    "wall_construction": "Wooden stilt houses in the countryside; brick and render in towns; French colonial shophouses with shutters and teak balconies in Vientiane and Luang Prabang.",
+    "wall_color_palette": "Bare weathered timber, whitewash, faded colour; gilded and mirror-mosaic temple exteriors.",
+    "distinctive_building_types": "Wooden stilt houses; gilded Buddhist wats with steep layered roofs; the golden Pha That Luang stupa; well-preserved French colonial streets in Luang Prabang."
+  },
+
+  "nature": {
+    "vegetation": "Dense tropical monsoon forest, teak, and bamboo; rice on the Mekong lowlands; visible slash-and-burn clearings on hillsides.",
+    "terrain": "Very mountainous, especially in the north; the Mekong River forms much of the western border with Thailand, and most towns sit on flat river land with hills always visible around them.",
+    "climate_signature": "Tropical monsoon, hot. Skies are often thick with haze and smoke during the March–April agricultural burning season."
+  },
+
+  "vehicles": {
+    "common_brands": ["Toyota", "Honda", "Isuzu"],
+    "plate_color": "Yellow with black characters is common; also white and blue plates. Text is in Lao script and numerals.",
+    "plate_format": "Not confirmed — verify format and any province coding against sources.",
+    "distinctive_vehicles": "More pickups and older vehicles than Vietnam; not the same scooter swarm. Increasingly Chinese-brand vehicles."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Newer official coverage, but thin.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Limited — Vientiane plus the main highways and a scattering of towns, with large gaps. Outside the capital the Google car is often visible in shot."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Thailand",
+      "shared_traits": "Lao and Thai scripts look similar at a glance; both are Theravada Buddhist, both have black-and-white angular bollards and Mekong lowland scenery",
+      "tiebreaker": "Laos drives on the RIGHT, Thailand on the LEFT — the fastest tell. Laos is far poorer and more mountainous, with sparser, lower-quality coverage, more dirt roads, and the rounder, simpler Lao script."
+    },
+    {
+      "country": "Vietnam",
+      "shared_traits": "Mountainous, forested, Buddhist, right-hand traffic, rice paddies",
+      "tiebreaker": "Vietnamese is heavily-accented Latin script; Lao is its own abugida. Vietnam is much more developed and densely built, with motorbike swarms and tube houses."
+    },
+    {
+      "country": "Cambodia",
+      "shared_traits": "South-East Asian Buddhist context, French colonial traces, right-hand traffic, patchy coverage",
+      "tiebreaker": "Khmer script is angular and dense, unlike rounded Lao. Cambodia is flat; Laos is mountainous with the Mekong hemmed by hills."
+    },
+    {
+      "country": "Myanmar",
+      "shared_traits": "Buddhist South-East Asia, right-hand traffic, mountainous, limited coverage",
+      "tiebreaker": "Burmese script is made of circles and is unmistakable next to Lao. Myanmar's cars are a chaotic mix of left- and right-hand-drive on right-hand roads."
+    }
+  ]
+}

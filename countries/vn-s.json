@@ -1,0 +1,82 @@
+{
+  "id": "vn-s",
+  "name": "South Vietnam (Ho Chi Minh City · Mekong Delta)",
+  "aliases": ["Miền Nam", "Southern Vietnam", "Nam Bộ", "Saigon"],
+  "continent": "Asia",
+  "tier": 1,
+  "status": "draft",
+  "parent": "vn",
+  "sources": [
+    "https://geometas.com/metas/countries/vietnam/",
+    "https://geopinning.space/en/rule/asia/vietnum/",
+    "https://en.wikipedia.org/wiki/Mekong_Delta"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇻🇳",
+    "capital": "Ho Chi Minh City"
+  },
+
+  "language": {
+    "official_languages": ["Vietnamese"],
+    "script": "Latin",
+    "sample_text": "CHÚ Ý — NGUY HIỂM",
+    "script_notes": "Vietnamese Latin script with dense diacritics and đ, as national. Khmer script also turns up on temples and signs in the western Mekong Delta, near the Cambodian border.",
+    "false_friends": ["North Vietnam", "Cambodia", "Thailand"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Red and white, as national.",
+    "bollard_shape": "Concrete post; verify profile against photos.",
+    "guardrail_type": "Steel W-beam on highways; long delta roads run on embankments beside canals with low kerbs instead.",
+    "line_paint": "White and yellow centre lines where marked; red-and-white striped sign poles.",
+    "curb_style": "Painted black-and-white kerbs in towns and along canal-side roads.",
+    "km_marker_style": "Southern power company (EVN SPC): concrete poles carrying a 'mountain + inverted-triangle' mark, frequently doubled by a parallel line of fibre-optic poles — a checkable 'this is the south' tell. Yellow-topped kilometre stones on highways."
+  },
+
+  "architecture": {
+    "roof_style": "Tube-house frontages; wider streets and more modern mid-rise in Ho Chi Minh City.",
+    "roof_material": "Corrugated metal, concrete slab, some tile.",
+    "wall_construction": "Masonry tube houses, often brightly painted; canal-side houses on low stilts or piles over the water in the delta.",
+    "wall_color_palette": "Vivid saturated colours; mustard-yellow French colonial in central Saigon.",
+    "distinctive_building_types": "Colourful tube houses; grand French colonial set-pieces in Saigon (Notre-Dame, Central Post Office, Opera House); Khmer Theravada pagodas and Cao Đài temples in the delta; stilt houses over canals."
+  },
+
+  "nature": {
+    "vegetation": "The Mekong Delta is a web of rivers and canals lined with coconut and water palms, banana and intense green rice; mangroves near the coast; rubber plantations in the south-east around Đồng Nai and Bình Dương.",
+    "terrain": "Almost entirely flat — the vast, low, waterlogged Mekong Delta crisscrossed by channels, plus the slightly higher south-east. Phú Quốc island has unpaved red-earth roads.",
+    "climate_signature": "Hot and humid all year with a pronounced wet and dry season and no cool winter. Strong tropical light, deep greens, palm shadows."
+  },
+
+  "vehicles": {
+    "common_brands": ["Honda", "Toyota", "Hyundai"],
+    "plate_color": "White (private), yellow (commercial), blue (government), red (military) — as national.",
+    "plate_format": "DDLL-NNN.NN; province codes 50–59 are Ho Chi Minh City, 60s–90s cover the southern provinces.",
+    "distinctive_vehicles": "Motorbike swarms, densest of all in Ho Chi Minh City; boats do much of the transport work in the delta."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Older generations; legacy coverage only.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Moped-mounted and trekker imagery. Scenes are consistently hot, bright and green — no grey winter look anywhere in the south."
+  },
+
+  "confusion_set": [
+    {
+      "country": "North Vietnam",
+      "shared_traits": "Same country — Vietnamese script, tube houses, motorbikes, red flags",
+      "tiebreaker": "The south is flat tropical delta, hot and green year-round, with 'mountain + inverted-triangle' EVN SPC poles and parallel fibre-optic poles; the north is hilly with karst, a cool grey winter and holed EVN NPC poles."
+    },
+    {
+      "country": "Cambodia",
+      "shared_traits": "The Mekong lowlands, palms, rice and Theravada temples continue straight across the border",
+      "tiebreaker": "Vietnamese Latin script vs Khmer script; southern Vietnam is more densely built and developed, with far more motorbikes and painted tube houses."
+    },
+    {
+      "country": "Thailand",
+      "shared_traits": "Hot tropical lowland, Buddhist temples, palms",
+      "tiebreaker": "Thailand drives on the left and uses Thai script; Vietnam drives on the right with Latin script and much denser motorbike traffic."
+    }
+  ]
+}

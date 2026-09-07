@@ -1,0 +1,82 @@
+{
+  "id": "vn-n",
+  "name": "North Vietnam (Hanoi · Red River Delta · northern mountains)",
+  "aliases": ["Miền Bắc", "Northern Vietnam", "Bắc Bộ"],
+  "continent": "Asia",
+  "tier": 1,
+  "status": "draft",
+  "parent": "vn",
+  "sources": [
+    "https://geometas.com/metas/countries/vietnam/",
+    "https://geopinning.space/en/rule/asia/vietnum/",
+    "https://en.wikipedia.org/wiki/Northern_Vietnam"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇻🇳",
+    "capital": "Hanoi"
+  },
+
+  "language": {
+    "official_languages": ["Vietnamese"],
+    "script": "Latin",
+    "sample_text": "CHÚ Ý — NGUY HIỂM",
+    "script_notes": "Vietnamese Latin script with dense diacritics and đ, as national. Communist propaganda posters and red flags are, if anything, more prominent in the north.",
+    "false_friends": ["South Vietnam", "China", "Laos"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Red and white, as national.",
+    "bollard_shape": "Concrete post; verify profile against photos.",
+    "guardrail_type": "Steel W-beam on the main highways; frequently absent on mountain roads.",
+    "line_paint": "White and yellow centre lines where marked; red-and-white striped sign poles.",
+    "curb_style": "Painted black-and-white kerbs in towns.",
+    "km_marker_style": "Northern power company (EVN NPC): concrete utility poles punched with holes right the way up the pole — a strong, checkable 'this is the north' tell. Yellow-topped concrete kilometre stones on highways."
+  },
+
+  "architecture": {
+    "roof_style": "Narrow tube-house frontages in towns; older, denser urban fabric than the south.",
+    "roof_material": "Corrugated metal, concrete slab, clay tile.",
+    "wall_construction": "Masonry tube houses; a higher proportion of pre-war French colonial buildings.",
+    "wall_color_palette": "Mustard-yellow colonial render, weathered pastels, grey concrete.",
+    "distinctive_building_types": "Hanoi's Old Quarter and colonial villas; older Chinese-influenced temple and pagoda architecture; narrow tube houses; hill-tribe stilt houses in the far northern mountains."
+  },
+
+  "nature": {
+    "vegetation": "Intensively farmed rice across the flat, extremely densely populated Red River Delta; tea plantations in the northern hills; subtropical and pine forest at altitude.",
+    "terrain": "Flat delta around Hanoi giving way quickly to mountains toward the Chinese and Lao borders, with dramatic limestone karst (Hạ Long Bay, Ninh Bình, Hà Giang) and terraced rice hillsides (Sa Pa, Mù Cang Chải).",
+    "climate_signature": "Four distinct seasons — a genuinely cool, grey, often drizzly winter (December–March), and a hot, humid summer. Bare trees and flat overcast light are a northern giveaway."
+  },
+
+  "vehicles": {
+    "common_brands": ["Honda", "Toyota", "Hyundai"],
+    "plate_color": "White (private), yellow (commercial), blue (government), red (military) — as national.",
+    "plate_format": "DDLL-NNN.NN; province codes 29–33 are Hanoi, low-20s and 10s cover the northern provinces.",
+    "distinctive_vehicles": "Motorbike swarms as everywhere in Vietnam; more of the older imagery here is moped- or trekker-shot."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Older generations; legacy coverage only.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Moped-mounted and trekker imagery, often visibly older. Winter scenes look cool and grey, unlike anywhere in the south."
+  },
+
+  "confusion_set": [
+    {
+      "country": "South Vietnam",
+      "shared_traits": "Same country — Vietnamese script, tube houses, motorbikes, red flags",
+      "tiebreaker": "The north is hilly with limestone karst, has a cool grey winter, more colonial architecture, and holed EVN NPC poles; the south is flat tropical delta, hot year-round, with 'mountain + inverted-triangle' EVN SPC poles."
+    },
+    {
+      "country": "China",
+      "shared_traits": "Subtropical karst scenery, communist iconography, red-and-white furniture right across the border",
+      "tiebreaker": "Vietnamese Latin script vs Chinese Hanzi; Vietnamese plates and denser motorbike traffic; older, lower-quality legacy imagery."
+    },
+    {
+      "country": "Laos",
+      "shared_traits": "Mountainous, forested, Buddhist, right-hand traffic",
+      "tiebreaker": "Lao script vs Vietnamese Latin; northern Vietnam is much more developed and densely farmed than mountainous Laos."
+    }
+  ]
+}

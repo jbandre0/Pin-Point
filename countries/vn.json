@@ -1,0 +1,83 @@
+{
+  "id": "vn",
+  "name": "Vietnam",
+  "aliases": ["Việt Nam", "Viet Nam"],
+  "continent": "Asia",
+  "tier": 1,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/countries/vietnam/",
+    "https://geopinning.space/en/rule/asia/vietnum/",
+    "https://www.plonkit.net/vietnam",
+    "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Vietnam",
+    "https://saigoneer.com/saigon-culture/28533-what-can-vietnamese-license-plates-tell-you-about-the-vehicles-and-who-drives-them"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇻🇳",
+    "capital": "Hanoi"
+  },
+
+  "language": {
+    "official_languages": ["Vietnamese"],
+    "script": "Latin",
+    "sample_text": "CHÚ Ý — NGUY HIỂM",
+    "script_notes": "Vietnamese is the giveaway: Latin script but with the densest diacritics of any language — stacked tone marks over vowels, plus the barred letter đ and vowels ơ ư ă â ê ô. That alone separates Vietnam from Laos, Cambodia, Thailand and China. Small red national flags are often flown outside houses and shops. .vn domain.",
+    "false_friends": ["Laos", "Cambodia", "China", "Thailand"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Red and white.",
+    "bollard_shape": "Concrete post; exact profile not confirmed — verify against photos.",
+    "guardrail_type": "Standard steel W-beam on highways; many rural roads have none.",
+    "line_paint": "White and yellow centre lines where roads are marked; not diagnostic. Sign support poles are often painted in red-and-white stripes.",
+    "curb_style": "Kerbs in towns are frequently painted, usually black-and-white.",
+    "km_marker_style": "Concrete utility poles, and their markings vary by regional power company — a genuine North/Central/South tell (see the regional profiles). Yellow-topped concrete kilometre stones on national highways."
+  },
+
+  "architecture": {
+    "roof_style": "Dominated by the narrow street frontage of 'tube houses' rather than a roof shape; corrugated metal and flat concrete roofs behind.",
+    "roof_material": "Corrugated metal, concrete slab, some clay tile.",
+    "wall_construction": "Masonry 'tube houses' (nhà ống) — tall, very narrow (often only 3–4 m wide), several storeys, with ornate and colourful street facades.",
+    "wall_color_palette": "Bright pastels and saturated colours; mustard-yellow on French colonial buildings.",
+    "distinctive_building_types": "Tube houses everywhere; mustard-yellow French colonial villas and shophouses with shutters in Hanoi and Saigon; communist propaganda billboards; Buddhist and Cao Đài temples."
+  },
+
+  "nature": {
+    "vegetation": "Wet rice paddies almost everywhere in the lowlands; palms; tropical broadleaf forest in the hills; coffee in the Central Highlands and rubber plantations inland.",
+    "terrain": "Two big rice deltas — the Red River in the north, the Mekong in the south — joined by a long narrow coastal strip, with a mountainous interior and sharply pointed limestone karst in the north and centre.",
+    "climate_signature": "The north has a cool, often grey and drizzly winter (down toward 10–15 °C); the centre and south are hot and humid year-round. A bare, overcast look points north."
+  },
+
+  "vehicles": {
+    "common_brands": ["Honda", "Toyota", "Hyundai"],
+    "plate_color": "White with black text on private vehicles; yellow with black text on commercial vehicles (taxis, trucks, ride-hail — since 2020); blue on government vehicles; red on military.",
+    "plate_format": "DDLL-NNN.NN — the first two digits are a province code (29–33 Hanoi, 50–59 Ho Chi Minh City).",
+    "distinctive_vehicles": "Dense swarms of motorbikes and scooters are the single strongest Vietnam signal."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Older generations; Vietnam has no current official car coverage and is treated as a 'legacy' country in GeoGuessr.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Much of the coverage is moped-mounted — you can often see handlebars, a wing mirror and the driver's helmet in shot — plus a lot of trekker footage. Imagery tends to look older and lower quality than neighbouring countries."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Laos",
+      "shared_traits": "South-East Asian Buddhist context, rice paddies, right-hand traffic, similar road furniture",
+      "tiebreaker": "Vietnamese is heavily-accented Latin script; Lao is its own rounded abugida. Vietnam is far more developed and densely built, with motorbike swarms and tube houses."
+    },
+    {
+      "country": "Cambodia",
+      "shared_traits": "The Mekong delta and lowland rice country continue across the border; similar climate and temples",
+      "tiebreaker": "Khmer script vs Vietnamese Latin script. Cambodia is flatter, poorer-looking and less densely built than southern Vietnam."
+    },
+    {
+      "country": "China",
+      "shared_traits": "Red-and-white infrastructure, karst scenery in the north, communist iconography, dense motorbike use near the border",
+      "tiebreaker": "Chinese Hanzi signage vs Vietnamese Latin script; Chinese plates and road design differ; China drives on the right too, so lean on the writing."
+    }
+  ]
+}
