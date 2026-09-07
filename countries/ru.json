@@ -1,0 +1,82 @@
+{
+  "id": "ru",
+  "name": "Russia",
+  "aliases": ["Russian Federation", "Россия"],
+  "continent": "Europe/Asia",
+  "tier": 1,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/regions/eastern_europe/",
+    "https://geodummy.com/russia",
+    "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Russia",
+    "https://geomastr.com/"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇷🇺",
+    "capital": "Moscow"
+  },
+
+  "language": {
+    "official_languages": ["Russian"],
+    "script": "Cyrillic",
+    "sample_text": "ВНИМАНИЕ — РЕМОНТ ДОРОГИ",
+    "script_notes": "Cyrillic, Russian only on official signage (no Latin transliteration alongside). Distinguishing Russian Cyrillic from Belarusian, Ukrainian, Kazakh or Bulgarian by the alphabet alone is hard — lean on plates, road furniture and context. .ru domain, currency the ruble (₽).",
+    "false_friends": ["Belarus", "Ukraine", "Kazakhstan", "Bulgaria"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Concrete or metal posts, often painted in regional colour schemes — red-and-white in some oblasts, black-and-white in others.",
+    "bollard_shape": "Plain rounded or squared concrete post.",
+    "guardrail_type": "Steel W-beam; long unprotected stretches on rural highways.",
+    "line_paint": "White centre and edge lines where roads are marked; many rural roads are unmarked or unpaved.",
+    "curb_style": "Painted kerbs in towns.",
+    "km_marker_style": "Sign support poles are painted white with a small black band right at the base — a scheme that is essentially unique to Russia. Concrete utility poles, frequently the ex-Soviet 'holey' pole. Big blue direction signs."
+  },
+
+  "architecture": {
+    "roof_style": "Flat roofs on Soviet apartment blocks; pitched roofs on houses; onion domes on Orthodox churches.",
+    "roof_material": "Sheet metal, slate, and profiled steel; painted metal on village houses.",
+    "wall_construction": "Prefabricated concrete-panel apartment blocks (panelka / khrushchyovka) in every town; log and timber village houses (izba), often with carved and painted window frames (nalichniki).",
+    "wall_color_palette": "Bare grey concrete, pale yellows and greens on older blocks; blue, green and white paint on wooden houses.",
+    "distinctive_building_types": "Soviet panel blocks; wooden izby with carved nalichniki; onion-domed churches; dachas on city outskirts; Lenin statues and Soviet mosaics."
+  },
+
+  "nature": {
+    "vegetation": "Vast birch, pine and spruce forest (taiga) across the centre and north, larch further east; tundra in the Arctic; wheat-and-sunflower steppe in the south.",
+    "terrain": "Mostly flat plains — the East European Plain and the West Siberian Plain — with the low Ural Mountains between them and higher ranges only in the south (Caucasus, Altai) and the far east.",
+    "climate_signature": "A great deal of the coverage is snowy, muddy or bleak, with bare birches, grey skies and low sun. Winter and shoulder-season imagery dominates."
+  },
+
+  "vehicles": {
+    "common_brands": ["Lada", "Kia", "Toyota"],
+    "plate_color": "Full-width white with black text, a small Russian flag and 'RUS', plus a region number in the right-hand box.",
+    "plate_format": "L NNN LL RR — one letter, three digits, two letters, then a region code (77/97/99/177/197/199/777/797/799 = Moscow; 78/98/178/198 = Saint Petersburg).",
+    "distinctive_vehicles": "Old boxy Ladas (VAZ) are the iconic Russia tell, alongside GAZ and UAZ. Marshrutka minibuses. In the Far East, imported right-hand-drive Japanese cars."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3, with some Gen 2 and Gen 4; several distinctive camera cars, including a black car with a tall antenna.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Extensive but uneven — dense in the west, thin across Siberia and the north, with long gaps between towns. Frequently snowy or muddy."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Belarus",
+      "shared_traits": "Cyrillic, Soviet panel blocks, wooden houses, birch forest, similar road furniture",
+      "tiebreaker": "Belarus looks tidier and better-maintained — smoother roads, mown verges, fewer potholes — uses its own plates without a region number box, and Belarusian wording sometimes appears alongside Russian."
+    },
+    {
+      "country": "Ukraine",
+      "shared_traits": "Cyrillic, Soviet architecture, black-earth farmland and steppe in the south",
+      "tiebreaker": "Ukrainian plates use a blue EU-style strip; Ukrainian spelling differs (і, ї, є); and Ukraine has been re-covered more recently in places."
+    },
+    {
+      "country": "Kazakhstan",
+      "shared_traits": "Cyrillic, Soviet blocks, endless steppe and forest-steppe in the north",
+      "tiebreaker": "Kazakh plates and signage (often Kazakh alongside Russian, increasingly Latin), more open and treeless steppe, and Central Asian architectural touches further south."
+    }
+  ]
+}

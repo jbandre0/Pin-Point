@@ -1,0 +1,77 @@
+{
+  "id": "mx-s",
+  "name": "Southern Mexico (Oaxaca · Chiapas · Guerrero)",
+  "aliases": ["Sur de México", "South Mexico"],
+  "continent": "North America",
+  "tier": 1,
+  "status": "draft",
+  "parent": "mx",
+  "sources": [
+    "https://geometas.com/metas/countries/mexico/",
+    "https://geopinning.space/en/rule/n_america/mexico/",
+    "https://en.wikipedia.org/wiki/Chiapas"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇲🇽",
+    "capital": "Oaxaca City"
+  },
+
+  "language": {
+    "official_languages": ["Spanish"],
+    "script": "Latin",
+    "sample_text": "PRECAUCIÓN — ZONA DE TOPES",
+    "script_notes": "Mexican Spanish as national. This is Mexico's most indigenous region — Zapotec, Mixtec, Tzotzil, Tzeltal and other languages are widely spoken, and traditional dress is often visible. Teachers'-union (CNTE) political graffiti is common on walls.",
+    "false_friends": ["Guatemala", "Central Mexico"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "White-and-orange highway bollards where present, as national.",
+    "bollard_shape": "Slim post.",
+    "guardrail_type": "Steel W-beam on the main roads; many mountain roads have none, with frequent landslide scars and 'derrumbes' signs.",
+    "line_paint": "Patchy — main highways marked, but many roads are narrow, winding and unmarked; 'topes' everywhere, often unmarked and severe.",
+    "curb_style": "Painted kerbs and cobbles in the colonial towns; little kerbing in villages.",
+    "km_marker_style": "Octagonal or crucifix concrete poles. Fewer OXXOs than the centre and north; more small independent shops and roadside stalls."
+  },
+
+  "architecture": {
+    "roof_style": "Flat concrete roofs with tinacos in towns; corrugated sheet and palm thatch in poorer and hotter areas; clay tile in the colonial highlands.",
+    "roof_material": "Concrete slab, corrugated metal, palm thatch, some clay tile.",
+    "wall_construction": "More adobe, brick and simple block than the rest of Mexico, a lot of it unfinished; carved-stone colonial buildings in Oaxaca and San Cristóbal de las Casas.",
+    "wall_color_palette": "Bare block and adobe browns, plus strong colours on colonial and market-town facades.",
+    "distinctive_building_types": "Colonial Oaxaca and highland San Cristóbal; simple adobe and block village houses; palm-thatch huts in the hot lowlands; visible poverty and self-built housing on steep slopes."
+  },
+
+  "nature": {
+    "vegetation": "Tropical dry forest and pine-oak on the slopes; lush cloud forest and rainforest in the Chiapas highlands and the Lacandon; coffee plantations on the mountainsides; coconut palms and mangroves on the Guerrero and Oaxaca coasts.",
+    "terrain": "Rugged, tightly folded mountains — the Sierra Madre del Sur and the Chiapas highlands — dropping steeply to a narrow Pacific coastal plain, with the flat, fiercely windy Isthmus of Tehuantepec (wind farms) between them.",
+    "climate_signature": "Hot and humid in the lowlands, cooler and wet in the highlands, greener and rainier overall than central or northern Mexico."
+  },
+
+  "vehicles": {
+    "common_brands": ["Nissan", "Volkswagen", "Chevrolet"],
+    "plate_color": "State plates for Oaxaca, Chiapas and Guerrero, each with its own design and banner.",
+    "plate_format": "State-dependent, commonly three letters and three–four digits.",
+    "distinctive_vehicles": "Older, more worn cars and pickups; 'camionetas' (pickup trucks) used as rural passenger transport; three-wheeled mototaxis in lowland towns."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3, some Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Bar-and-mirror-free camera car as national. Coverage thins out in the mountains; many minor roads unmapped."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Guatemala",
+      "shared_traits": "The Chiapas highlands run straight into Guatemala — same volcanic mountains, milpa farming, Maya communities and climate",
+      "tiebreaker": "Mexican state plates, OXXO, 'topes' signage and the bar-free camera car; Guatemala has uniform plates, US-style school buses and rougher roads."
+    },
+    {
+      "country": "Central Mexico",
+      "shared_traits": "Same country — colonial towns, pine-oak highlands, ALTO, tinacos",
+      "tiebreaker": "The south is poorer and rougher — more adobe, corrugated roofs, unpaved and landslide-prone roads, visible indigenous dress and union graffiti, and more jungle; the centre is a prosperous temperate plateau with volcanoes and agave."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "mx-y",
+  "name": "Yucatán Peninsula (Yucatán · Quintana Roo · Campeche)",
+  "aliases": ["Península de Yucatán", "Yucatan"],
+  "continent": "North America",
+  "tier": 1,
+  "status": "draft",
+  "parent": "mx",
+  "sources": [
+    "https://geometas.com/metas/countries/mexico/",
+    "https://geopinning.space/en/rule/n_america/mexico/",
+    "https://en.wikipedia.org/wiki/Yucat%C3%A1n_Peninsula"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇲🇽",
+    "capital": "Mérida"
+  },
+
+  "language": {
+    "official_languages": ["Spanish"],
+    "script": "Latin",
+    "sample_text": "PRECAUCIÓN — ZONA DE TOPES",
+    "script_notes": "Mexican Spanish as national. Yucatec Maya is widely spoken and appears on some signs and place names (x, dz and double vowels — Xcaret, Dzibilchaltún, Chicxulub).",
+    "false_friends": ["Belize", "Guatemala (Petén)", "Central Mexico"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "White-and-orange highway bollards, as national.",
+    "bollard_shape": "Slim post.",
+    "guardrail_type": "Steel W-beam on the Mérida–Cancún toll road; little elsewhere — the terrain is flat and there is nothing to fall off.",
+    "line_paint": "White and yellow lines on the main roads; long dead-straight roads through flat scrub jungle. 'Topes' at every village.",
+    "curb_style": "Painted kerbs in towns; pale limestone gravel shoulders.",
+    "km_marker_style": "Octagonal or crucifix concrete poles. OXXO in the towns; heavy tourist and hotel signage along the Quintana Roo coast; roadside Maya ruins."
+  },
+
+  "architecture": {
+    "roof_style": "Flat concrete roofs with tinacos in towns; rounded thatched roofs on traditional Maya houses.",
+    "roof_material": "Concrete slab; palm or guano thatch on Maya 'na' houses; resort tile and concrete on the coast.",
+    "wall_construction": "Block and rendered masonry; whitewashed colonial buildings in Mérida; traditional oval Maya houses with rounded ends and stick or stone walls; large gated resort and condo developments along the Riviera Maya.",
+    "wall_color_palette": "Whitewash and pastels in Mérida; bright colours in villages; manicured beige resort palettes on the coast.",
+    "distinctive_building_types": "Oval Maya thatched houses with rounded ends; pastel colonial Mérida; henequen-hacienda ruins; Maya archaeological sites (Chichén Itzá, Uxmal, Tulum); wall-to-wall tourist development from Cancún to Tulum."
+  },
+
+  "nature": {
+    "vegetation": "Low, dense, fairly uniform dry scrub-jungle over almost the whole peninsula; old henequen (agave) fields; mangroves and coconut palms along the Caribbean coast.",
+    "terrain": "Dead flat limestone shelf — no hills except the low Puuc ridge in the south, and no rivers or surface streams at all; water sits in sinkholes (cenotes). Soil and roads are pale limestone white.",
+    "climate_signature": "Hot and humid year-round, hurricane-prone. The total flatness, the absence of rivers, the pale white ground and the even low canopy are the giveaway."
+  },
+
+  "vehicles": {
+    "common_brands": ["Nissan", "Volkswagen", "Chevrolet"],
+    "plate_color": "State plates for Yucatán, Quintana Roo and Campeche, each with its own design.",
+    "plate_format": "State-dependent, commonly three letters and three–four digits.",
+    "distinctive_vehicles": "Three-wheeled mototaxis are the standard transport in small towns; rental cars and tour vans around the Riviera Maya."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Bar-and-mirror-free camera car as national. Good coverage on the highways and the tourist coast; long identical straight roads through flat jungle in between."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Belize",
+      "shared_traits": "Flat low jungle continues straight across the border; right-hand traffic; similar climate and Maya ruins",
+      "tiebreaker": "Belize is English-speaking with British-style signage and its own plates; Mexico's Yucatán has Spanish signs, Mexican state plates, OXXO and 'topes'."
+    },
+    {
+      "country": "Guatemala (Petén)",
+      "shared_traits": "Flat jungle, Maya sites, Spanish",
+      "tiebreaker": "Guatemalan plates and rougher roads; no OXXO; the Petén is more forested and less developed than the Yucatán's toll-road-and-resort corridor."
+    },
+    {
+      "country": "Central Mexico",
+      "shared_traits": "Same country — ALTO, OXXO, tinacos, state plates",
+      "tiebreaker": "The Yucatán is perfectly flat with white limestone ground, no rivers, uniform low jungle and Maya round houses; central Mexico is a mountainous plateau with volcanoes and colonial cities."
+    }
+  ]
+}

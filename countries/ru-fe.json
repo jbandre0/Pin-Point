@@ -1,0 +1,82 @@
+{
+  "id": "ru-fe",
+  "name": "Russian Far East (Vladivostok · Khabarovsk · Sakhalin)",
+  "aliases": ["Far Eastern Russia", "Primorye"],
+  "continent": "Asia",
+  "tier": 1,
+  "status": "draft",
+  "parent": "ru",
+  "sources": [
+    "https://geometas.com/metas/detail/7ccdb5f5-2b35-40e9-a003-2c2b8746754b/",
+    "https://geodummy.com/russia",
+    "https://en.wikipedia.org/wiki/Russian_Far_East"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇷🇺",
+    "capital": "Vladivostok"
+  },
+
+  "language": {
+    "official_languages": ["Russian"],
+    "script": "Cyrillic",
+    "sample_text": "ВНИМАНИЕ — РЕМОНТ ДОРОГИ",
+    "script_notes": "Russian Cyrillic as national. Chinese and Korean shop signage turns up in Vladivostok and near the border crossings.",
+    "false_friends": ["Northeast China", "Siberia", "Japan"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Regional colour schemes as national.",
+    "bollard_shape": "Plain post.",
+    "guardrail_type": "Steel W-beam on the main routes; hilly coastal roads with drops.",
+    "line_paint": "Centre lines in the cities and on the Vladivostok–Khabarovsk highway; unmarked elsewhere.",
+    "curb_style": "Painted kerbs in towns.",
+    "km_marker_style": "White sign poles with a black base band. Utility poles as national. Vladivostok has steep, cable-strung hillside streets."
+  },
+
+  "architecture": {
+    "roof_style": "Flat Soviet block roofs; pitched roofs on wooden houses inland.",
+    "roof_material": "Sheet metal, slate.",
+    "wall_construction": "Soviet panel blocks in the cities, some climbing steep hillsides in Vladivostok; timber houses in the interior and on Sakhalin.",
+    "wall_color_palette": "Grey concrete, faded paint; occasional Chinese-influenced signage colours near the border.",
+    "distinctive_building_types": "Vladivostok's hilly, bridge-spanned, faintly San-Francisco-like cityscape; standard panelki; wooden villages inland; Japanese-era buildings on southern Sakhalin."
+  },
+
+  "nature": {
+    "vegetation": "Manchurian mixed forest — Korean pine, oak, maple, lianas — more diverse than Siberian taiga, with a monsoon-green look in summer; birch and larch inland and to the north.",
+    "terrain": "Hilly and mountainous (the Sikhote-Alin range) with a deeply indented Pacific coast, the long island of Sakhalin, and the volcanoes of Kamchatka further north.",
+    "climate_signature": "Monsoon-influenced — humid, often foggy summers and cold, dry, snowy winters. Greener and mistier than inland Siberia."
+  },
+
+  "vehicles": {
+    "common_brands": ["Toyota", "Nissan", "Honda"],
+    "plate_color": "White with a region number — 25/125 Primorsky Krai, 27 Khabarovsk, 65 Sakhalin, 41 Kamchatka.",
+    "plate_format": "L NNN LL RR.",
+    "distinctive_vehicles": "The signature Far East tell: huge numbers of imported second-hand Japanese cars with the steering wheel on the RIGHT, driven on right-hand roads. Toyota, Nissan and Honda dominate; almost no Ladas by comparison."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3, some Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Concentrated around Vladivostok, Khabarovsk, Sakhalin and the highway between them, with big gaps. Often overcast or foggy on the coast."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Northeast China",
+      "shared_traits": "The same Manchurian forest, hills and climate run straight across the border; Chinese signage appears on the Russian side too",
+      "tiebreaker": "Russian Cyrillic and region-number plates vs Chinese Hanzi and plates; China's official Street View is minimal, so extensive coverage of this landscape is the Russian side."
+    },
+    {
+      "country": "Siberia",
+      "shared_traits": "Same country — Cyrillic, panelki, Russian plates, taiga inland",
+      "tiebreaker": "The Far East has right-hand-drive Japanese cars driven on the right, hilly Pacific coastline and more diverse Manchurian forest; Siberia is flatter taiga with mostly left-hand-drive Ladas and the railway corridor."
+    },
+    {
+      "country": "Japan",
+      "shared_traits": "Right-hand-drive Japanese cars, hilly coast, misty maritime climate",
+      "tiebreaker": "Japan drives on the LEFT and uses kana/kanji; the Far East drives on the RIGHT with Cyrillic signage and Soviet panel blocks."
+    }
+  ]
+}

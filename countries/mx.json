@@ -1,0 +1,82 @@
+{
+  "id": "mx",
+  "name": "Mexico",
+  "aliases": ["México", "Estados Unidos Mexicanos"],
+  "continent": "North America",
+  "tier": 1,
+  "status": "draft",
+  "sources": [
+    "https://geometas.com/metas/countries/mexico/",
+    "https://geopinning.space/en/rule/n_america/mexico/",
+    "https://geodummy.com/mexico",
+    "https://geomastr.com/license-plates/"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇲🇽",
+    "capital": "Mexico City"
+  },
+
+  "language": {
+    "official_languages": ["Spanish"],
+    "script": "Latin",
+    "sample_text": "PRECAUCIÓN — ZONA DE TOPES",
+    "script_notes": "Mexican Spanish. Stop signs read ALTO (not PARE as in South America — a quick continent tell, though Guatemala, Panama and Costa Rica also use ALTO). Speed bumps ('topes') and their warning signs are everywhere. Company names often end in -MEX or -MX (PEMEX, CEMEX, CINEMEX). .mx domain.",
+    "false_friends": ["Guatemala", "United States", "Colombia", "Honduras"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "White-and-orange bollards are common along highways.",
+    "bollard_shape": "Slim post.",
+    "guardrail_type": "Steel W-beam; concrete barrier on the toll ('cuota') motorways.",
+    "line_paint": "White edge lines and yellow centre lines; 'topes' (speed bumps) marked with yellow-and-black chevrons or just painted stripes at every town entrance.",
+    "curb_style": "Painted kerbs, often yellow, in towns.",
+    "km_marker_style": "Concrete utility poles, frequently octagonal in cross-section or shaped like a crucifix. OXXO convenience stores (red/yellow) at almost every junction; blue VeTV satellite dishes on houses; green-and-white highway signage with kilometre markers."
+  },
+
+  "architecture": {
+    "roof_style": "Flat concrete roofs on most houses, cluttered with black plastic water tanks (tinacos) and left-up rebar; clay-tile pitched roofs in the central highlands.",
+    "roof_material": "Poured concrete slab; clay tile in the centre; corrugated sheet and palm thatch in the poorer south.",
+    "wall_construction": "Unrendered brick or concrete-block, often unfinished with rebar sticking up for a future storey; rendered and brightly painted masonry in finished areas; adobe in the arid north.",
+    "wall_color_palette": "Bare grey block and red brick, plus vivid pinks, blues, greens and ochres on painted houses.",
+    "distinctive_building_types": "Half-finished block houses with rooftop rebar and tinacos; Spanish colonial centres with tiled church domes and cobbled streets; INFONAVIT tract-housing estates on city edges."
+  },
+
+  "nature": {
+    "vegetation": "Desert scrub and cactus in the north; pine-oak forest and agave on the central plateau; tropical dry forest and jungle in the south and on the Yucatán; mangroves on both coasts.",
+    "terrain": "Two long mountain chains (Sierra Madre Occidental and Oriental) enclosing a high central plateau (the Altiplano), with a volcanic belt across the middle (Popocatépetl, Pico de Orizaba), narrow coastal plains, and a completely flat limestone Yucatán.",
+    "climate_signature": "Arid and hot in the north, temperate on the high plateau, hot and humid in the tropical south. Wide regional swing — see the regional profiles."
+  },
+
+  "vehicles": {
+    "common_brands": ["Nissan", "Volkswagen", "Chevrolet"],
+    "plate_color": "Each of the 32 states issues its own plate design with the state name across the top — plate colour and graphics are a strong per-state clue (e.g. Jalisco yellow-over-light-blue, Nayarit red). Taxi colours also vary by city — pink in Mexico City, yellow in Monterrey.",
+    "plate_format": "State-dependent, commonly three letters and three–four digits.",
+    "distinctive_vehicles": "Nissan (long the default taxi as the 'Tsuru'), VW (Beetle 'vocho' and Jetta), and pickups everywhere. VW Beetles still common in some regions."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "The Mexican camera car shows no roof bars and no visible wing mirrors — a clean silhouette. Broad coverage nationwide."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Guatemala",
+      "shared_traits": "Spanish, ALTO stop signs, volcanic highlands, colourful chicken buses, similar architecture along the shared border",
+      "tiebreaker": "Mexican state plates, OXXO stores, 'topes' signage and the bar-and-mirror-free camera car; Guatemala's roads are rougher, its plates uniform, and US-style school buses ('camionetas') dominate."
+    },
+    {
+      "country": "United States",
+      "shared_traits": "Desert scenery, wide roads and ranch land continue across the border in the north",
+      "tiebreaker": "English vs Spanish signage; US state plates and road signs; no OXXO, no topes, no rooftop tinacos or unfinished-rebar houses."
+    },
+    {
+      "country": "Colombia",
+      "shared_traits": "Spanish, mountainous, colonial towns, tropical vegetation",
+      "tiebreaker": "Colombia's stop signs say PARE, its plates and buses differ, and it has no OXXO or state-name plates."
+    }
+  ]
+}

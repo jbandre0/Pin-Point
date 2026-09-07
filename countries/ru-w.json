@@ -1,0 +1,82 @@
+{
+  "id": "ru-w",
+  "name": "European Russia (Moscow · St Petersburg · west of the Urals)",
+  "aliases": ["Western Russia", "European Russia"],
+  "continent": "Europe",
+  "tier": 1,
+  "status": "draft",
+  "parent": "ru",
+  "sources": [
+    "https://geometas.com/metas/regions/eastern_europe/",
+    "https://geodummy.com/russia",
+    "https://en.wikipedia.org/wiki/European_Russia"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇷🇺",
+    "capital": "Moscow"
+  },
+
+  "language": {
+    "official_languages": ["Russian"],
+    "script": "Cyrillic",
+    "sample_text": "ВНИМАНИЕ — РЕМОНТ ДОРОГИ",
+    "script_notes": "Russian Cyrillic as national. White-with-black-base sign poles and big blue direction signs apply here too.",
+    "false_friends": ["Belarus", "Baltic states", "Ukraine"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Concrete/metal posts in regional colour schemes (red-and-white or black-and-white).",
+    "bollard_shape": "Plain rounded or squared post.",
+    "guardrail_type": "Steel W-beam; better maintained near Moscow and St Petersburg, rougher further out.",
+    "line_paint": "White centre and edge lines on the M-roads and main routes; minor roads often unmarked.",
+    "curb_style": "Painted kerbs in towns.",
+    "km_marker_style": "White sign poles with a black band at the base. Concrete 'holey' utility poles. The road network is densest and best-surfaced here of anywhere in Russia."
+  },
+
+  "architecture": {
+    "roof_style": "Flat Soviet block roofs; pitched roofs and onion domes on older buildings.",
+    "roof_material": "Sheet metal, slate, painted steel.",
+    "wall_construction": "Dense Soviet panel blocks in the cities; imperial-era stone and stucco in the historic centres (St Petersburg especially); log izby with carved nalichniki in the villages of the Golden Ring.",
+    "wall_color_palette": "Grey concrete, ochre and pale green stucco; blue, green and white wooden houses.",
+    "distinctive_building_types": "St Petersburg's imperial architecture; the Kremlin-and-cathedral old towns of the Golden Ring; endless panel-block suburbs; wooden village houses with painted window frames."
+  },
+
+  "nature": {
+    "vegetation": "Mixed and broadleaf forest in the west and centre — birch, oak, linden — grading into darker spruce-pine taiga toward the north; heavily farmed black-earth on the southern fringe.",
+    "terrain": "The flat East European Plain, barely rippled by the low Valdai and Central Russian uplands, drained by big slow rivers (Volga, Oka, Don headwaters).",
+    "climate_signature": "Cold continental with reliably snowy winters, but milder than Siberia; overcast grey skies are common, and much coverage is late-autumn or winter."
+  },
+
+  "vehicles": {
+    "common_brands": ["Lada", "Kia", "Hyundai"],
+    "plate_color": "White with a region number — low numbers and the Moscow/St Petersburg codes (77/97/99/78/98 and their 1xx, 7xx variants) dominate here.",
+    "plate_format": "L NNN LL RR.",
+    "distinctive_vehicles": "Ladas plus a large share of modern foreign cars; left-hand drive throughout (unlike the Far East)."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4; the black-car-with-antenna appears here.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "The densest, most complete coverage in Russia, including full city networks."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Belarus",
+      "shared_traits": "Cyrillic, panel blocks, birch woodland, wooden houses — almost indistinguishable at a glance",
+      "tiebreaker": "Belarus is visibly tidier and smoother-surfaced, uses plates without a region-number box, and occasionally shows Belarusian spelling."
+    },
+    {
+      "country": "Siberia",
+      "shared_traits": "Same country — Cyrillic, panelki, taiga",
+      "tiebreaker": "European Russia has more broadleaf forest, better roads, denser towns and imperial-era architecture; Siberia is emptier, more wooden, more larch, snowier and rougher."
+    },
+    {
+      "country": "Ukraine",
+      "shared_traits": "Cyrillic, Soviet-era towns, farmland",
+      "tiebreaker": "Ukrainian plates carry a blue EU-style strip; Ukrainian orthography uses і, ї, є."
+    }
+  ]
+}

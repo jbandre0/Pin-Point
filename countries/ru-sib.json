@@ -1,0 +1,82 @@
+{
+  "id": "ru-sib",
+  "name": "Siberia (Novosibirsk · Krasnoyarsk · Irkutsk · Lake Baikal)",
+  "aliases": ["Sibir"],
+  "continent": "Asia",
+  "tier": 1,
+  "status": "draft",
+  "parent": "ru",
+  "sources": [
+    "https://geometas.com/metas/regions/eastern_europe/",
+    "https://geodummy.com/russia",
+    "https://en.wikipedia.org/wiki/Siberia"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇷🇺",
+    "capital": "Novosibirsk"
+  },
+
+  "language": {
+    "official_languages": ["Russian"],
+    "script": "Cyrillic",
+    "sample_text": "ВНИМАНИЕ — РЕМОНТ ДОРОГИ",
+    "script_notes": "Russian Cyrillic as national. Buryat (also Cyrillic) appears around Lake Baikal and Ulan-Ude, and Tuvan around Kyzyl.",
+    "false_friends": ["Kazakhstan", "European Russia", "Mongolia"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Regional colour schemes as national.",
+    "bollard_shape": "Plain post.",
+    "guardrail_type": "Steel W-beam on the federal highway; long unprotected stretches elsewhere.",
+    "line_paint": "Centre lines on the R254/R255 trans-Siberian highway and in towns; much of the network is unmarked or gravel.",
+    "curb_style": "Painted kerbs in towns; unpaved edges common.",
+    "km_marker_style": "White sign poles with a black base band. Wooden and concrete utility poles. The Trans-Siberian Railway and its power lines are frequently in view, and towns are strung along it with long empty gaps between."
+  },
+
+  "architecture": {
+    "roof_style": "Flat Soviet block roofs in the cities; steep pitched roofs on wooden village houses to shed snow.",
+    "roof_material": "Sheet metal, slate; painted metal on wooden houses.",
+    "wall_construction": "A higher proportion of log and timber houses than European Russia, often unpainted and weathered grey; Soviet panel blocks in the regional capitals.",
+    "wall_color_palette": "Weathered bare timber, faded blue and green paint, grey concrete.",
+    "distinctive_building_types": "Whole villages of log izby, sometimes on muddy unpaved streets; panel-block district centres; wooden Orthodox churches; the odd wooden watchtower or old ostrog remnant."
+  },
+
+  "nature": {
+    "vegetation": "Endless taiga — larch, pine, spruce, birch — with larch turning bright gold in autumn; boggy forest across the flat West Siberian Plain; steppe and forest-steppe in the south toward Kazakhstan and Mongolia.",
+    "terrain": "The vast flat, waterlogged West Siberian Plain in the west; the higher Central Siberian Plateau; mountains around Baikal and toward Mongolia (Altai, Sayan, Khamar-Daban).",
+    "climate_signature": "The most extreme continental climate anywhere here — deep snow and hard light in winter, spring mud, short intense summers. A large share of the coverage is snow-covered or muddy."
+  },
+
+  "vehicles": {
+    "common_brands": ["Lada", "Toyota", "UAZ"],
+    "plate_color": "White with a region number — codes in the 22s, 24s, 38s, 42s, 54s, 55s and 70s cover the main Siberian regions.",
+    "plate_format": "L NNN LL RR.",
+    "distinctive_vehicles": "Ladas and UAZ off-roaders, plus a noticeable number of used Japanese cars filtering west from the Far East — but still mostly left-hand drive here, unlike the Far East proper."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3, some Gen 2.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Thin and linear — the trans-Siberian highway and railway corridor plus the big cities, with enormous unmapped gaps. Frequently deep snow."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Kazakhstan",
+      "shared_traits": "Northern Kazakh forest-steppe and birch groves look almost identical; Cyrillic; Soviet blocks",
+      "tiebreaker": "Kazakh plates and bilingual Kazakh/Russian (increasingly Latin) signage; Kazakhstan is more open and treeless as you go south."
+    },
+    {
+      "country": "European Russia",
+      "shared_traits": "Same country — Cyrillic, panelki, Russian plates, birch",
+      "tiebreaker": "Siberia is emptier and rougher — more unpainted log houses, more larch, worse and often gravel roads, deeper snow, and the railway/power-line corridor always nearby."
+    },
+    {
+      "country": "Mongolia",
+      "shared_traits": "Grassland, larch-clad mountains and Cyrillic near the southern border",
+      "tiebreaker": "Mongolia has gers (yurts), far less paved road, Mongolian-style Cyrillic signage and Mongolian plates."
+    }
+  ]
+}

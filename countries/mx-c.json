@@ -1,0 +1,82 @@
+{
+  "id": "mx-c",
+  "name": "Central Mexico / Bajío (Mexico City · Puebla · Guadalajara · Guanajuato)",
+  "aliases": ["Centro de México", "Bajío", "Central Mexico"],
+  "continent": "North America",
+  "tier": 1,
+  "status": "draft",
+  "parent": "mx",
+  "sources": [
+    "https://geometas.com/metas/countries/mexico/",
+    "https://geopinning.space/en/rule/n_america/mexico/",
+    "https://en.wikipedia.org/wiki/Central_Mexico"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇲🇽",
+    "capital": "Mexico City"
+  },
+
+  "language": {
+    "official_languages": ["Spanish"],
+    "script": "Latin",
+    "sample_text": "PRECAUCIÓN — ZONA DE TOPES",
+    "script_notes": "Mexican Spanish as national — ALTO, 'topes', -MEX names, OXXO. Nahuatl-derived place names are dense here (Tlaxcala, Cuernavaca, Iztapalapa).",
+    "false_friends": ["Southern Mexico", "Northern Mexico", "Andean South America"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "White-and-orange highway bollards, as national.",
+    "bollard_shape": "Slim post.",
+    "guardrail_type": "Steel W-beam; concrete barrier on the busy toll roads radiating from Mexico City.",
+    "line_paint": "White and yellow lines; heavy 'topes' at every town, plus painted crosswalks and speed tables in the colonial centres.",
+    "curb_style": "Painted kerbs; cobblestone streets in historic centres.",
+    "km_marker_style": "Octagonal or crucifix concrete poles. OXXO everywhere; dense billboard and shopfront clutter; jacaranda trees lining city avenues (purple in spring)."
+  },
+
+  "architecture": {
+    "roof_style": "Flat concrete roofs with tinacos in the cities; pitched clay-tile roofs in colonial towns and villages.",
+    "roof_material": "Concrete slab and clay tile.",
+    "wall_construction": "Rendered and painted masonry in the colonial cores; unfinished brick with rebar on the vast urban periphery; stone in the oldest buildings.",
+    "wall_color_palette": "Bright ochre, terracotta, blue and pink in the colonial towns; grey block on the outskirts.",
+    "distinctive_building_types": "Dense colonial cities with tiled church domes, cobbled streets and painted facades (Guanajuato, Morelia, Querétaro, San Miguel de Allende); sprawling Mexico City with hillside informal housing; INFONAVIT estates."
+  },
+
+  "nature": {
+    "vegetation": "Pine-oak forest on the ranges, maguey and blue agave rows on the plateau (Jalisco's tequila country is a strong tell), maize and nopal cactus, and jacaranda and eucalyptus in the cities.",
+    "terrain": "A high plateau at roughly 1,800–2,400 m, rolling and fertile in the Bajío basin, ringed and studded with big volcanoes — Popocatépetl and Iztaccíhuatl by Mexico City, Nevado de Toluca, Pico de Orizaba on the eastern rim.",
+    "climate_signature": "Temperate highland — cool, clear, thin light, a dry winter and a rainy summer, rarely hot, with occasional frost. Snow-capped volcanoes on the horizon."
+  },
+
+  "vehicles": {
+    "common_brands": ["Nissan", "Volkswagen", "Chevrolet"],
+    "plate_color": "State plates — CDMX, Estado de México, Jalisco (yellow over light blue), Guanajuato, Puebla, Querétaro, each with its own banner.",
+    "plate_format": "State-dependent, commonly three letters and three–four digits.",
+    "distinctive_vehicles": "Heavy city traffic, pink Mexico City taxis, VW 'combi' collective vans, the full Nissan/VW mix; VW Beetles still common in some towns."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Bar-and-mirror-free camera car as national. Very dense coverage across the Mexico City megalopolis and the Bajío."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Southern Mexico",
+      "shared_traits": "Same country — colonial towns, pine-oak highlands, ALTO, OXXO, tinacos",
+      "tiebreaker": "The centre is a temperate plateau with big volcanoes, agave fields and prosperous colonial cities; the south is rougher folded mountains, poorer roads, more visible indigenous presence and more jungle."
+    },
+    {
+      "country": "Northern Mexico",
+      "shared_traits": "Same country furniture and signage",
+      "tiebreaker": "The centre is cool highland pine-oak with volcanoes and dense cities; the north is flat hot desert with cactus and spread-out towns."
+    },
+    {
+      "country": "Andean South America",
+      "shared_traits": "High-altitude light, colonial architecture, agave/cactus vegetation",
+      "tiebreaker": "Stop signs read ALTO not PARE; Mexican state plates and OXXO; Nahuatl place names rather than Quechua."
+    }
+  ]
+}

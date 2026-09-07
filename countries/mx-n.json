@@ -1,0 +1,77 @@
+{
+  "id": "mx-n",
+  "name": "Northern Mexico (Chihuahua · Sonora · Nuevo León · Coahuila)",
+  "aliases": ["Norte de México", "North Mexico"],
+  "continent": "North America",
+  "tier": 1,
+  "status": "draft",
+  "parent": "mx",
+  "sources": [
+    "https://geometas.com/metas/countries/mexico/",
+    "https://geopinning.space/en/rule/n_america/mexico/",
+    "https://en.wikipedia.org/wiki/Northern_Mexico"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇲🇽",
+    "capital": "Monterrey"
+  },
+
+  "language": {
+    "official_languages": ["Spanish"],
+    "script": "Latin",
+    "sample_text": "PRECAUCIÓN — ZONA DE TOPES",
+    "script_notes": "Mexican Spanish as national — ALTO stop signs, 'topes', -MEX company names. English is more visible here than elsewhere in Mexico because of the border and maquiladora industry.",
+    "false_friends": ["United States", "Central Mexico"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "White-and-orange highway bollards, as national.",
+    "bollard_shape": "Slim post.",
+    "guardrail_type": "Steel W-beam; concrete barrier on the wide toll roads that carry freight to the US.",
+    "line_paint": "White edge and yellow centre lines; long straight well-marked desert highways.",
+    "curb_style": "Painted kerbs in towns.",
+    "km_marker_style": "Octagonal or crucifix concrete poles. OXXO everywhere; more US chains (fast food, big-box stores) near the border than in the rest of Mexico."
+  },
+
+  "architecture": {
+    "roof_style": "Low, flat concrete roofs with tinacos; wider spacing between buildings.",
+    "roof_material": "Concrete slab; some sheet metal on ranch buildings.",
+    "wall_construction": "Brick and concrete block, more of it rendered and finished than in the south; adobe on older rural houses; big modern industrial and residential development around Monterrey.",
+    "wall_color_palette": "Beige, tan and pale earth tones; less of the vivid painting seen further south.",
+    "distinctive_building_types": "Spread-out, car-oriented border towns; ranch (rancho) compounds; modern glass towers and industrial parks in Monterrey; US-style strip malls near the frontier."
+  },
+
+  "nature": {
+    "vegetation": "Chihuahuan and Sonoran desert — creosote scrub, ocotillo, yucca, and tall saguaro cactus in Sonora — with dry grassland on the plateaus and pine forest only high in the Sierra Madre Occidental.",
+    "terrain": "Basin and range: wide flat desert valleys between bare rocky ranges, the deep Copper Canyon in the Sierra Madre, and flat coastal desert in Sonora.",
+    "climate_signature": "Hot desert days, cold desert nights, very little rain (a summer monsoon bump in Sonora). Dusty air, hard shadows, sparse tan vegetation."
+  },
+
+  "vehicles": {
+    "common_brands": ["Nissan", "Chevrolet", "Ford"],
+    "plate_color": "State plates — Chihuahua, Sonora, Nuevo León and Coahuila each with their own design and name banner.",
+    "plate_format": "State-dependent, commonly three letters and three–four digits.",
+    "distinctive_vehicles": "A higher share of American pickups (Ford, RAM, Chevrolet Silverado) and older US imports; lots of freight trucks; often dusty."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Bar-and-mirror-free camera car as national. Long empty desert-highway stretches between towns."
+  },
+
+  "confusion_set": [
+    {
+      "country": "United States",
+      "shared_traits": "Sonoran/Chihuahuan desert, saguaro, wide roads and ranch land continue straight across the border into Arizona, New Mexico and Texas",
+      "tiebreaker": "Spanish signage, Mexican state plates, OXXO, 'topes' and rooftop tinacos; the US side has English signs, US plates and no speed bumps on highways."
+    },
+    {
+      "country": "Central Mexico",
+      "shared_traits": "Same country — ALTO, OXXO, tinacos, state plates",
+      "tiebreaker": "The north is flat hot desert with cactus, spread-out towns and more US influence; the centre is a cooler pine-oak highland plateau with volcanoes, agave and dense colonial cities."
+    }
+  ]
+}

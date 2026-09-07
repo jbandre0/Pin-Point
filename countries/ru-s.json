@@ -1,0 +1,82 @@
+{
+  "id": "ru-s",
+  "name": "Southern Russia & the Caucasus (Krasnodar · Rostov · Dagestan · Sochi)",
+  "aliases": ["South Russia", "North Caucasus"],
+  "continent": "Europe",
+  "tier": 1,
+  "status": "draft",
+  "parent": "ru",
+  "sources": [
+    "https://geometas.com/metas/regions/eastern_europe/",
+    "https://geodummy.com/russia",
+    "https://en.wikipedia.org/wiki/Southern_Russia"
+  ],
+
+  "quick_id": {
+    "driving_side": "right",
+    "flag_emoji": "🇷🇺",
+    "capital": "Rostov-on-Don"
+  },
+
+  "language": {
+    "official_languages": ["Russian"],
+    "script": "Cyrillic",
+    "sample_text": "ВНИМАНИЕ — РЕМОНТ ДОРОГИ",
+    "script_notes": "Russian Cyrillic as national. In the North Caucasus republics (Dagestan, Chechnya, Ingushetia) local titular languages and Arabic religious script also appear on signs and buildings.",
+    "false_friends": ["Ukraine", "Kazakhstan", "Georgia"]
+  },
+
+  "road_furniture": {
+    "bollard_color": "Regional colour schemes as national.",
+    "bollard_shape": "Plain post.",
+    "guardrail_type": "Steel W-beam; mountain roads in the Caucasus have long exposed drops.",
+    "line_paint": "White lines on the M4 'Don' highway and main routes; many steppe and mountain roads unmarked.",
+    "curb_style": "Painted kerbs in towns.",
+    "km_marker_style": "White sign poles with a black base band. Utility poles as national. The M4 corridor carries heavy holiday traffic toward the Black Sea."
+  },
+
+  "architecture": {
+    "roof_style": "Low-pitched and flat roofs on single-storey steppe houses; ornate multi-storey houses and minarets in the Caucasus.",
+    "roof_material": "Sheet metal, tile, some flat concrete.",
+    "wall_construction": "Brick and rendered single-storey houses across the Kuban and Don steppe, often with a walled yard; taller, more decorated brick houses in the North Caucasus; resort blocks around Sochi.",
+    "wall_color_palette": "Whitewash, brick, and pastel render; brighter and more ornamented than central Russia.",
+    "distinctive_building_types": "Cossack-style steppe farmhouses with courtyards; mosques with minarets in the Muslim-majority republics (a strong 'this is the south' tell); Sochi's subtropical resort architecture and palm-lined promenades."
+  },
+
+  "nature": {
+    "vegetation": "Wheat and huge yellow sunflower fields across the Kuban and Don steppe — the sunflowers are a strong southern signal — plus vineyards and orchards. Subtropical growth (palms, tea, magnolia, cypress) on the Black Sea coast around Sochi.",
+    "terrain": "Flat to gently rolling steppe in the north; the wall of the Greater Caucasus (up to Elbrus, 5,600 m) along the south; a narrow, steep Black Sea coastal strip.",
+    "climate_signature": "The warmest part of Russia — hot dry steppe summers, mild low-snow winters, and humid subtropical conditions at Sochi. Much less snow in the coverage than anywhere else in the country."
+  },
+
+  "vehicles": {
+    "common_brands": ["Lada", "Kia", "Hyundai"],
+    "plate_color": "White with a region number — codes in the 20s, 60s, 90s and 160s cover Krasnodar, Rostov, Stavropol and the Caucasus republics.",
+    "plate_format": "L NNN LL RR.",
+    "distinctive_vehicles": "National mix, left-hand drive. Agricultural machinery and grain trucks on the steppe."
+  },
+
+  "google_coverage": {
+    "camera_generation": "Mostly Gen 3 and Gen 4.",
+    "blur_style": "Standard Google blurring.",
+    "coverage_notes": "Good coverage along the M4 corridor, the Kuban and the Black Sea coast; patchier in the mountain republics. Scenes are sunnier and greener than the Russian norm."
+  },
+
+  "confusion_set": [
+    {
+      "country": "Ukraine",
+      "shared_traits": "The wheat-and-sunflower steppe runs straight across the border; Cyrillic; similar villages",
+      "tiebreaker": "Ukrainian plates have a blue EU-style strip and Ukrainian spelling; Russian plates carry a region number."
+    },
+    {
+      "country": "European Russia",
+      "shared_traits": "Same country — Cyrillic, panelki, Russian plates",
+      "tiebreaker": "The south is warm and low-snow with sunflower fields, minarets and (near Sochi) palms; central Russia is birch forest, snow and onion domes."
+    },
+    {
+      "country": "Georgia",
+      "shared_traits": "The Greater Caucasus mountains, similar terrain and vegetation on the southern slopes",
+      "tiebreaker": "Georgian uses its own rounded script and Georgian/Latin plates; Russian side is Cyrillic with region-number plates."
+    }
+  ]
+}
