@@ -90,29 +90,37 @@ nest cleanly — e.g. `br-se.json` for São Paulo state under Brazil).
       "shared_traits": "Cyrillic script visible in places, similar terrain",
       "tiebreaker": "Serbia mostly uses Latin script on road signs; Bulgaria is Cyrillic-only on official signage"
     }
-  ],
-
-  "regional_variants": []   // only populated for large/diverse countries
+  ]
+  // a regional profile adds one more key here: "parent": "br"
 }
 ```
 
-## Regional variant sub-schema (large countries only)
+## Regional profiles (large / diverse countries)
+
+A region is a **full standalone profile in its own file**, not a set of
+overrides. `countries/br-se.json` looks exactly like a country file — every
+top-level field populated — plus one extra key:
 
 ```
-{
-  "region_id": "br-se",
-  "region_name": "São Paulo, Brazil",
-  "parent": "br",
-  "notes_override": {
-    // any top-level field can be overridden at regional granularity
-    "architecture": { "distinctive_building_types": "..." }
-  }
-}
+"parent": "br"     // the parent country's id
 ```
 
-## Fact-ID convention for the SRS engine
+Conventions:
 
-`{country_id}.{category}.{field}` — e.g. `bg.road_furniture.bollard_color`.
-This is what gets tracked in the user's progress store (see below), so the
-SRS engine never needs to know anything about geography — it just moves
-fact-IDs through Leitner boxes.
+- `id` is `"{cc}-{region}"` lowercase (`br-se`, `br-n`). The filename matches.
+- `name` is the region's own name, e.g.
+  `"Southeast Brazil (São Paulo · Rio · Minas Gerais)"`.
+- `quick_id.capital` is the region's representative city, not the national one.
+- Repeat the genuinely national constants (language, plate format, driving
+  side) — the region is a whole profile the user studies on its own.
+- Children are discovered from files whose `parent` matches; there is no list
+  on the parent. A country with no regions simply omits `parent` and has no
+  child files.
+- The parent country still gets its own `br.json` — a national overview
+  covering the countrywide constants.
+
+## Fact-ID convention
+
+`{record_id}.{category}.{field}` — e.g. `bg.road_furniture.bollard_color` or
+`br-se.architecture.roof_style`. Regions are region-scoped: their facts are
+tracked, quizzed and scored independently of the national profile.
