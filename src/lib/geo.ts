@@ -7,7 +7,11 @@
 
 import isoCountries from "i18n-iso-countries";
 
-export const WORLD_TOPOJSON_URL = "/geo/countries-110m.json";
+// Prefixed with the base path so it resolves under a GitHub Pages project URL
+// (jbandre0.github.io/pinpoint/geo/...) as well as at localhost root.
+export const WORLD_TOPOJSON_URL = `${
+  process.env.NEXT_PUBLIC_BASE_PATH ?? ""
+}/geo/countries-110m.json`;
 
 /** Geometry `id` on the Natural Earth topojson is the numeric ISO code. */
 export interface GeoProperties {

@@ -45,9 +45,12 @@ export function useSession(): Session | null | undefined {
 export async function signInWithEmail(email: string): Promise<{ error?: string }> {
   const supabase = getSupabase();
   if (!supabase) return { error: "Sign-in is not configured." };
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const { error } = await supabase.auth.signInWithOtp({
     email: email.trim(),
-    options: { emailRedirectTo: `${window.location.origin}/auth/callback` },
+    options: {
+      emailRedirectTo: `${window.location.origin}${basePath}/auth/callback`,
+    },
   });
   return error ? { error: error.message } : {};
 }
