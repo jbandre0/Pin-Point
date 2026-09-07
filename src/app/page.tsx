@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AuthChip from "@/components/AuthChip";
 import WorldMap from "@/components/WorldMap";
 import StatWidgets from "@/components/StatWidgets";
 import { getChildren, getTopLevelCountries } from "@/lib/countries";
@@ -24,6 +25,7 @@ export default function HomePage() {
     <main className="relative h-dvh w-screen overflow-hidden bg-[#0a111e] text-slate-100">
       <WorldMap countries={countryData} />
       <StatWidgets perCountry={countryData} />
+      <AuthChip />
 
       <header className="pointer-events-none absolute left-1/2 top-4 -translate-x-1/2 text-center">
         <h1 className="font-mono text-sm font-semibold uppercase tracking-[0.4em] text-cyan-200/80">
