@@ -34,7 +34,25 @@ export interface CategoryIsolatedQuestion {
   answer: string; // correct country name
 }
 
-export type Question = CategoryIsolatedQuestion;
+export interface ReverseRecallQuestion {
+  mode: "reverse-recall";
+  countryId: string;
+  countryName: string; // the prompt — everything else is revealed from the full record
+}
+
+export type Question = CategoryIsolatedQuestion | ReverseRecallQuestion;
+
+/** Distinct country ids that have at least one fact matching the filter. */
+export function countryPoolSize(
+  countries: Country[],
+  states: FactStateMap,
+  filter: QuizFilter,
+): number {
+  const ids = new Set(
+    factPool(countries, states, filter).map((f) => f.countryId),
+  );
+  return ids.size;
+}
 
 // --- helpers -------------------------------------------------------------
 
@@ -127,6 +145,22 @@ export function buildSession(
     });
   }
 
-  // discriminator / reverse-recall land in Stage 3b/3c
+  if (mode === "reverse-recall") {
+    const byCountry = new Map<string, PoolFact[]>();
+    for (const f of factPool(countries, states, filter)) {
+      const bucket = byCountry.get(f.countryId);
+      if (bucket) bucket.push(f);
+      else byCountry.set(f.countryId, [f]);
+    }
+    return shuffle(Array.from(byCountry.keys()))
+      .slice(0, length)
+      .map((countryId): ReverseRecallQuestion => ({
+        mode: "reverse-recall",
+        countryId,
+        countryName: byId.get(countryId)!.name,
+      }));
+  }
+
+  // discriminator lands in Stage 3c
   return [];
 }
