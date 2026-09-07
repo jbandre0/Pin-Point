@@ -13,10 +13,12 @@ import {
 import {
   buildSession,
   countryPoolSize,
+  discriminatorPoolSize,
   factPool,
   isMasteredOnlyFilter,
   matchesCountry,
   type CategoryIsolatedQuestion,
+  type DiscriminatorQuestion,
   type Question,
   type QuizFilter,
   type QuizMode,
@@ -57,7 +59,7 @@ const MODES: { id: QuizMode; name: string; blurb: string; ready: boolean }[] = [
     id: "discriminator",
     name: "Discriminator",
     blurb: "Given a tiebreaker clue, pick which lookalike country it confirms.",
-    ready: false,
+    ready: true,
   },
   {
     id: "reverse-recall",
@@ -91,7 +93,12 @@ export default function Quiz({ countries }: { countries: Country[] }) {
     () => countryPoolSize(countries, factState, filter),
     [countries, factState, filter],
   );
+  const discCount = useMemo(
+    () => discriminatorPoolSize(countries, factState, filter),
+    [countries, factState, filter],
+  );
   const isRecall = mode === "reverse-recall";
+  const isDisc = mode === "discriminator";
 
   const [session, setSession] = useState<{
     questions: Question[];
@@ -103,7 +110,7 @@ export default function Quiz({ countries }: { countries: Country[] }) {
   const [ended, setEnded] = useState(false);
 
   function start() {
-    const cap = isRecall ? countryCount : pool.length;
+    const cap = isRecall ? countryCount : isDisc ? discCount : pool.length;
     const length = lengthChoice === 0 ? cap : lengthChoice;
     const questions = buildSession(countries, factState, mode, filter, length);
     if (questions.length === 0) return;
@@ -129,7 +136,8 @@ export default function Quiz({ countries }: { countries: Country[] }) {
 
   // ---- setup ----
   if (!session) {
-    const canStart = pool.length > 0 && selStates.length > 0;
+    const available = isRecall ? countryCount : isDisc ? discCount : pool.length;
+    const canStart = available > 0 && selStates.length > 0;
     return (
       <Shell>
         <h1 className="text-3xl font-semibold text-slate-50">Quiz</h1>
@@ -228,14 +236,18 @@ export default function Quiz({ countries }: { countries: Country[] }) {
           <span className="font-mono text-xs text-slate-400">
             {isRecall
               ? `${countryCount} countr${countryCount === 1 ? "y" : "ies"} in pool`
-              : `${pool.length} fact${pool.length === 1 ? "" : "s"} in pool`}
+              : isDisc
+                ? `${discCount} round${discCount === 1 ? "" : "s"} in pool`
+                : `${pool.length} fact${pool.length === 1 ? "" : "s"} in pool`}
           </span>
         </div>
         {!canStart && (
           <p className="mt-3 text-xs text-slate-500">
             {selStates.length === 0
               ? "Select at least one familiarity state."
-              : "No facts match. Widen the filter, or mark some facts on a country page first."}
+              : isDisc
+                ? "No country with a confusion set matches this filter yet."
+                : "No facts match. Widen the filter, or mark some facts on a country page first."}
           </p>
         )}
 
@@ -275,7 +287,7 @@ export default function Quiz({ countries }: { countries: Country[] }) {
                 <span className={r.correct ? "text-emerald-400" : "text-rose-400"}>
                   {r.correct ? "✓" : "✗"}
                 </span>
-                {q.mode === "category-isolated" ? (
+                {q.mode === "category-isolated" && (
                   <>
                     <span className="font-mono text-xs text-slate-500">
                       {q.prompt}
@@ -290,7 +302,8 @@ export default function Quiz({ countries }: { countries: Country[] }) {
                       <span className="text-amber-400">↓ demoted</span>
                     )}
                   </>
-                ) : (
+                )}
+                {q.mode === "reverse-recall" && (
                   <>
                     <span className="font-mono text-xs text-slate-500">
                       Reverse-recall
@@ -298,6 +311,21 @@ export default function Quiz({ countries }: { countries: Country[] }) {
                     <span className="text-slate-200">{q.countryName}</span>
                     {r.grade && (
                       <span className="text-slate-500">— {r.grade}</span>
+                    )}
+                  </>
+                )}
+                {q.mode === "discriminator" && (
+                  <>
+                    <span className="font-mono text-xs text-slate-500">
+                      Discriminator
+                    </span>
+                    <span className="text-slate-200">
+                      {q.answer} vs {q.lookalike}
+                    </span>
+                    {!r.correct && (
+                      <span className="text-slate-500">
+                        (you: {r.userAnswer || "—"})
+                      </span>
                     )}
                   </>
                 )}
@@ -357,7 +385,7 @@ export default function Quiz({ countries }: { countries: Country[] }) {
       </div>
       <FilterRecap mode={session.mode} filter={session.filter} />
 
-      {q.mode === "category-isolated" ? (
+      {q.mode === "category-isolated" && (
         <CategoryIsolatedView
           key={idx}
           q={q}
@@ -368,8 +396,20 @@ export default function Quiz({ countries }: { countries: Country[] }) {
           onResult={recordResult}
           onNext={next}
         />
-      ) : (
+      )}
+      {q.mode === "reverse-recall" && (
         <ReverseRecallView
+          key={idx}
+          q={q}
+          country={country}
+          result={res}
+          isLast={isLast}
+          onResult={recordResult}
+          onNext={next}
+        />
+      )}
+      {q.mode === "discriminator" && (
+        <DiscriminatorView
           key={idx}
           q={q}
           country={country}
@@ -699,6 +739,82 @@ function ReverseRecallView({
               </button>
             </div>
           )}
+        </div>
+      )}
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------------------
+
+function DiscriminatorView({
+  q,
+  country,
+  result,
+  isLast,
+  onResult,
+  onNext,
+}: {
+  q: DiscriminatorQuestion;
+  country: Country | null;
+  result: Result | undefined;
+  isLast: boolean;
+  onResult: (r: Result) => void;
+  onNext: () => void;
+}) {
+  function submit(answer: string) {
+    if (result) return;
+    onResult({ correct: answer === q.answer, userAnswer: answer, demoted: false });
+  }
+
+  return (
+    <section className={`${CARD} mt-5`}>
+      <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">
+        Discriminator
+      </p>
+      <p className="mt-3 text-xs text-slate-500">This tiebreaker clue:</p>
+      <p className="mt-1 text-lg text-slate-100">{q.tiebreaker}</p>
+      <p className="mt-3 text-sm text-slate-400">
+        <span className="text-slate-500">They get confused because — </span>
+        {q.sharedTraits}
+      </p>
+      <p className="mt-4 text-sm text-slate-400">
+        Which country does the clue point you to?
+      </p>
+
+      {!result ? (
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {q.options.map((opt) => (
+            <button
+              key={opt}
+              type="button"
+              onClick={() => submit(opt)}
+              className="rounded-lg border border-slate-700 px-3 py-2 text-left text-sm text-slate-100 transition-colors hover:border-cyan-400/60 hover:bg-cyan-400/10"
+            >
+              {opt}
+            </button>
+          ))}
+        </div>
+      ) : (
+        <div className="mt-4 border-t border-slate-800 pt-4">
+          <p
+            className={`text-sm font-medium ${
+              result.correct ? "text-emerald-400" : "text-rose-400"
+            }`}
+          >
+            {result.correct ? "Correct" : "Not quite"} — it&rsquo;s{" "}
+            {country?.quick_id.flag_emoji} {q.answer}, told apart here from{" "}
+            {q.lookalike}.
+            {!result.correct && (
+              <span className="font-normal text-slate-500">
+                {" "}
+                You said &ldquo;{result.userAnswer}&rdquo;.
+              </span>
+            )}
+          </p>
+          <button type="button" onClick={onNext} className={`${PRIMARY_BTN} mt-4`}>
+            {isLast ? "See results" : "Next question"}
+          </button>
         </div>
       )}
     </section>

@@ -40,7 +40,20 @@ export interface ReverseRecallQuestion {
   countryName: string; // the prompt — everything else is revealed from the full record
 }
 
-export type Question = CategoryIsolatedQuestion | ReverseRecallQuestion;
+export interface DiscriminatorQuestion {
+  mode: "discriminator";
+  countryId: string; // the source country the confusion entry belongs to
+  answer: string; // source country name
+  lookalike: string; // the confusion entry's country
+  sharedTraits: string;
+  tiebreaker: string; // the clue
+  options: string[]; // shuffled: answer + up to 2 confusion-set countries
+}
+
+export type Question =
+  | CategoryIsolatedQuestion
+  | ReverseRecallQuestion
+  | DiscriminatorQuestion;
 
 /** Distinct country ids that have at least one fact matching the filter. */
 export function countryPoolSize(
@@ -52,6 +65,22 @@ export function countryPoolSize(
     factPool(countries, states, filter).map((f) => f.countryId),
   );
   return ids.size;
+}
+
+/** Total (country, confusion-entry) rounds available for the discriminator. */
+export function discriminatorPoolSize(
+  countries: Country[],
+  states: FactStateMap,
+  filter: QuizFilter,
+): number {
+  const eligible = new Set(
+    factPool(countries, states, filter).map((f) => f.countryId),
+  );
+  let n = 0;
+  for (const c of countries) {
+    if (eligible.has(c.id)) n += c.confusion_set.length;
+  }
+  return n;
 }
 
 // --- helpers -------------------------------------------------------------
@@ -161,6 +190,34 @@ export function buildSession(
       }));
   }
 
-  // discriminator lands in Stage 3c
+  if (mode === "discriminator") {
+    const eligible = new Set(
+      factPool(countries, states, filter).map((f) => f.countryId),
+    );
+    const rounds: DiscriminatorQuestion[] = [];
+    for (const country of shuffle(
+      countries.filter(
+        (c) => eligible.has(c.id) && c.confusion_set.length > 0,
+      ),
+    )) {
+      for (const entry of shuffle(country.confusion_set)) {
+        const others = country.confusion_set
+          .filter((e) => e.country !== entry.country)
+          .map((e) => e.country);
+        const distractors = [entry.country, ...shuffle(others)].slice(0, 2);
+        rounds.push({
+          mode: "discriminator",
+          countryId: country.id,
+          answer: country.name,
+          lookalike: entry.country,
+          sharedTraits: entry.shared_traits,
+          tiebreaker: entry.tiebreaker,
+          options: shuffle([country.name, ...distractors]),
+        });
+      }
+    }
+    return shuffle(rounds).slice(0, length);
+  }
+
   return [];
 }
