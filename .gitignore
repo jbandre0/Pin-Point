@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local scratch (unzipped copies, build output)
+/ACTUAL SITE/
+/pinpointsource/
+/pinpointsource.zip
+/pinpoint-site/
+/pinpoint-site.zip
